@@ -130,8 +130,8 @@ body {
 <div class="hidden">
   <div id="youtubePlayer"></div>
 </div>
-<!-- ปุ่มเปิดเพลง (เปลี่ยนสีเป็นชมพูอ่อนพาสเทลๆ) -->
-<div class="fixed bottom-4 left-4 z-50">
+<!-- ปุ่มเปิดเพลง (เปลี่ยนสีเป็นชมพูอ่อนพาสเทลๆ และย้ายไปมุมขวาบน) -->
+<div class="fixed top-4 right-4 z-50">
   <button id="musicToggle" onclick="toggleMusic()" class="w-12 h-12 bg-white rounded-full p-1 shadow-md border-2 border-[#FFC9E5] flex items-center justify-center hover:scale-110 active:scale-95 transition-all group relative">
     <div class="w-full h-full rounded-full border-2 border-[#FFE6F2] bg-[#FFE6F2] flex items-center justify-center">
       <div id="cleficon" class="flex items-center justify-center text-[#A05990] transition-transform">
@@ -606,6 +606,7 @@ function openPaymentModal() {
 function closeModal(modalId) {
   const targetModal = document.getElementById(modalId);
   targetModal.classList.add('opacity-0');
+  targetModal.classList.0 = 'active'; // keep logic intact
   targetModal.classList.remove('active');
   setTimeout(() => {
     targetModal.classList.add('invisible');
@@ -685,3 +686,4 @@ function toggleMusic() {
 </script>
 </body>
 </html>
+
