@@ -4,6 +4,21 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Miori Shop</title>
+
+<!-- ======================================================== -->
+<!--  Open Graph / Facebook / LINE Meta Tags (สำหรับรูปพรีวิวแชร์ลิงก์) -->
+<!-- ======================================================== -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Miori Shop - รับออกแบบป้ายต่างๆ">
+<meta property="og:description" content="รับออกแบบป้ายต่างๆ เริ่มต้น 59.- ไม่จำกัดข้อมูลการใส่ ทางเราออกแบบการจัดวางให้ค่า">
+<meta property="og:image" content="ไม่มีชื่อ 81_20260925210212.png">
+
+<!-- Twitter Meta Tags -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Miori Shop - รับออกแบบป้ายต่างๆ">
+<meta name="twitter:description" content="รับออกแบบป้ายต่างๆ เริ่มต้น 59.- ไม่จำกัดข้อมูลการใส่ ทางเราออกแบบการจัดวางให้ค่า">
+<meta name="twitter:image" content="ไม่มีชื่อ 81_20260925210212.png">
+
 <!-- Google Fonts: Mitr -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -34,7 +49,7 @@ tailwind.config = {
         },
         brown: {
           light: '#C274B3',
-          DEFAULT: '#A05990', // สีตัวอักษรใหม่ตามกำหนด #A05990
+          DEFAULT: '#A05990',
           dark: '#803F72'
         }
       },
@@ -81,7 +96,7 @@ body {
 }
 @keyframes float-reverse {
   0%, 100% { transform: translateY(0px) rotate(0deg); }
-  50% { transform: translateY(-15px) rotate(-8deg); }
+  50% { transform: translateY(15px) rotate(-8deg); }
 }
 @keyframes float-slow {
   0%, 100% { transform: translateY(0px) scale(1); }
@@ -126,10 +141,12 @@ body {
 </head>
 <body class="antialiased selection:bg-pinky selection:text-white relative">
 
-<!-- Audio Element สำหรับเพลงภูมิหลัง -->
-<audio id="bgMusic" loop src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3"></audio>
+<!-- ซ่อน YouTube Player สำหรับเล่นเพลง ayumi hamasaki - Who... "Across the Universe" -->
+<div class="hidden">
+  <div id="youtubePlayer"></div>
+</div>
 
-<!-- ปุ่มเปิดเพลง (ปรับสีปุ่มเปิดปิดเพลงให้เข้ากับโทนสีใหม่) -->
+<!-- ปุ่มเปิดเพลง -->
 <div class="fixed bottom-4 left-4 z-50">
   <button id="musicToggle" onclick="toggleMusic()" class="w-12 h-12 bg-white rounded-full p-1 shadow-md border-2 border-[#A05990] flex items-center justify-center hover:scale-110 active:scale-95 transition-all group relative">
     <div class="w-full h-full rounded-full border-2 border-[#FFE6F2] bg-[#FFF0F7] flex items-center justify-center">
@@ -372,34 +389,6 @@ body {
           หมายเหตุ: ราคาขึ้นอยู่กับความละเอียดของข้อมูลและปริมาณเนื้อหา ทางร้านขอสงวนสิทธิ์ในการประเมินราคาตามความเหมาะสมนะคะ
         </p>
       </div>
-
-      <div class="hidden bg-gradient-to-b from-white to-pinky-light/30 rounded-3xl shadow-card p-6 space-y-4 border-2 border-pinky-dark relative overflow-hidden mt-5">
-        <div class="absolute top-0 right-0 bg-pinky-dark text-white text-[10px] px-3 py-1 rounded-bl-xl font-medium shadow-sm z-20">สุดคุ้ม!</div>
-        <div class="flex items-end justify-between border-b border-dashed border-pinky-dark/40 pb-3 relative z-10">
-          <div class="pr-2">
-            <span class="block font-medium text-lg text-pinky-dark leading-tight">เซ็ต 3 เว็บสุดคุ้ม<br><span class="text-sm">(พกป้ายมาเอง 1 ป้าย)</span></span>
-          </div>
-          <span class="text-2xl font-semibold text-brown">359.-</span>
-        </div>
-        <ul class="space-y-3 text-sm relative z-10 text-brown">
-          <li class="flex items-start gap-2">
-            <i data-lucide="check-circle-2" class="w-4 h-4 text-pinky-dark shrink-0 mt-0.5"></i>
-            <span class="leading-tight"><b>เว็บที่ 1:</b> พอร์ตโฟลิโอแนะนำตัว<br><span class="text-xs text-brown-light">+ ลงของขาย (ป้ายที่พกมา)</span></span>
-          </li>
-          <li class="flex items-start gap-2">
-            <i data-lucide="check-circle-2" class="w-4 h-4 text-pinky-dark shrink-0 mt-0.5"></i>
-            <span class="leading-tight"><b>เว็บที่ 2:</b> ป้ายบัญชี<br><span class="text-xs text-brown-light">มีปุ่มให้กดคัดลอกเลขบัญชีได้</span></span>
-          </li>
-          <li class="flex items-start gap-2">
-            <i data-lucide="check-circle-2" class="w-4 h-4 text-pinky-dark shrink-0 mt-0.5"></i>
-            <span class="leading-tight"><b>เว็บที่ 3:</b> เลือกเองได้ 1 เว็บ<br><span class="text-xs text-brown-light">(เลือกจากเทมเพลตที่มีเท่านั้น)</span></span>
-          </li>
-        </ul>
-        <div class="bg-white rounded-xl p-3 text-xs text-center border border-pinky-light relative z-10">
-          <span class="text-brown-light block mb-1">* เว็บในเซ็ตจะทํา <span class="text-pinky-dark font-medium">โทนสีเดียวกับป้ายที่พกมา</span> เท่านั้น</span>
-          <span class="text-pinky-dark font-medium block">ตกลิงก์ละ 100 นิดๆ คุ้มมากก</span>
-        </div>
-      </div>
     </section>
 
     <!-- Rules & Process -->
@@ -459,7 +448,7 @@ body {
       </button>
     </section>
 
-    <!-- Work parts (บล็อกนอกสุดเป็นเส้นปกติทึบ / กรอบในน้องหมา แมว หมู เป็นเส้นประ / ความหนาเส้นไอคอนขนาดปกติ) -->
+    <!-- Work parts -->
     <section class="bg-white rounded-3xl p-5 border-2 border-solid border-pinky/60 shadow-sm text-center">
       <h3 class="font-medium text-brown text-sm flex items-center justify-center gap-1.5">
         <i data-lucide="sparkles" class="w-4 h-4 text-brown"></i> Work parts
@@ -467,110 +456,30 @@ body {
       <p class="text-[10px] text-brown-light font-medium italic mt-0.5 mb-4">เลือกชิ้นส่วนประกอบงานตรงนี้</p>
 
       <div class="grid grid-cols-3 gap-3">
-        <!-- โพลารอยด์ 1: ˚₊‧꒰ა 𝘽𝙡𝙤𝙘𝙠 ໒꒱ ‧₊˚ -->
-        <a href="https://drive.google.com/drive/folders/10wVjpHKCr8rMZ-UoCd5G_ALc13AUC1Qk" target="_blank" class="bg-white hover:bg-pinky-light/30 border border-brown/20 rounded-2xl p-2 shadow-polaroid flex flex-col items-center justify-center text-center transition-all hover:scale-105 active:scale-95 group">
-          <div class="w-full aspect-square bg-cream rounded-xl border-2 border-dashed border-pinky-light flex items-center justify-center mb-2 p-1">
-            <i data-lucide="dog" class="w-16 h-16 text-brown group-hover:text-brown-dark transition-colors stroke-[1.5]"></i>
+        <!-- โพลารอยด์ 1 -->
+        <a href="https://drive.google.com/drive/folders/10wVjpHKCr8rMZ-UoCd5G_ALc13AUC1Qk" target="_blank" class="bg-white hover:bg-pinky-light/30 border border-brown/20 rounded-2xl p-2.5 shadow-polaroid flex flex-col items-center justify-center text-center transition-all hover:scale-105 active:scale-95 group">
+          <div class="w-full aspect-square bg-cream rounded-xl border-2 border-dashed border-pinky-light flex items-center justify-center mb-2 p-2">
+            <i data-lucide="dog" class="w-8 h-8 text-brown group-hover:text-brown-dark transition-colors stroke-[1.75]"></i>
           </div>
           <span class="text-[10px] font-medium text-brown group-hover:text-brown-dark transition-colors leading-tight">˚₊‧꒰ა 𝘽𝙡𝙤𝙘𝙠 ໒꒱ ‧₊˚</span>
         </a>
 
-        <!-- โพลารอยด์ 2: ˚₊‧꒰ა 𝙏𝙤𝙤𝙣 ໒꒱ ‧₊˚ -->
-        <a href="https://drive.google.com/drive/folders/1T36yZKLHN5huKfwu1NYW_PVLLsswHTiD" target="_blank" class="bg-white hover:bg-pinky-light/30 border border-brown/20 rounded-2xl p-2 shadow-polaroid flex flex-col items-center justify-center text-center transition-all hover:scale-105 active:scale-95 group">
-          <div class="w-full aspect-square bg-cream rounded-xl border-2 border-dashed border-pinky-light flex items-center justify-center mb-2 p-1">
-            <i data-lucide="cat" class="w-16 h-16 text-brown group-hover:text-brown-dark transition-colors stroke-[1.5]"></i>
+        <!-- โพลารอยด์ 2 -->
+        <a href="https://drive.google.com/drive/folders/1T36yZKLHN5huKfwu1NYW_PVLLsswHTiD" target="_blank" class="bg-white hover:bg-pinky-light/30 border border-brown/20 rounded-2xl p-2.5 shadow-polaroid flex flex-col items-center justify-center text-center transition-all hover:scale-105 active:scale-95 group">
+          <div class="w-full aspect-square bg-cream rounded-xl border-2 border-dashed border-pinky-light flex items-center justify-center mb-2 p-2">
+            <i data-lucide="cat" class="w-8 h-8 text-brown group-hover:text-brown-dark transition-colors stroke-[1.75]"></i>
           </div>
           <span class="text-[10px] font-medium text-brown group-hover:text-brown-dark transition-colors leading-tight">˚₊‧꒰ა 𝙏𝙤𝙤𝙣 ໒꒱ ‧₊˚</span>
         </a>
 
-        <!-- โพลารอยด์ 3: ˚₊‧꒰ა 𝘿𝙚𝙨𝙘𝙤 ໒꒱ ‧₊˚ -->
-        <a href="https://drive.google.com/drive/folders/1YLsW06GXE_ENus4ad8AUNU4FEM74Z2vl" target="_blank" class="bg-white hover:bg-pinky-light/30 border border-brown/20 rounded-2xl p-2 shadow-polaroid flex flex-col items-center justify-center text-center transition-all hover:scale-105 active:scale-95 group">
-          <div class="w-full aspect-square bg-cream rounded-xl border-2 border-dashed border-pinky-light flex items-center justify-center mb-2 p-1">
-            <i data-lucide="piggy-bank" class="w-16 h-16 text-brown group-hover:text-brown-dark transition-colors stroke-[1.5]"></i>
+        <!-- โพลารอยด์ 3 -->
+        <a href="https://drive.google.com/drive/folders/1YLsW06GXE_ENus4ad8AUNU4FEM74Z2vl" target="_blank" class="bg-white hover:bg-pinky-light/30 border border-brown/20 rounded-2xl p-2.5 shadow-polaroid flex flex-col items-center justify-center text-center transition-all hover:scale-105 active:scale-95 group">
+          <div class="w-full aspect-square bg-cream rounded-xl border-2 border-dashed border-pinky-light flex items-center justify-center mb-2 p-2">
+            <i data-lucide="piggy-bank" class="w-8 h-8 text-brown group-hover:text-brown-dark transition-colors stroke-[1.75]"></i>
           </div>
           <span class="text-[10px] font-medium text-brown group-hover:text-brown-dark transition-colors leading-tight">˚₊‧꒰ა 𝘿𝙚𝙨𝙘𝙤 ໒꒱ ‧₊˚</span>
         </a>
       </div>
-    </section>
-
-    <!-- ซ่อนส่วน Web Course -->
-    <section class="hidden bg-white rounded-3xl p-6 text-center relative shadow-card border-2 border-purpley/50">
-      <svg class="absolute -left-3 -top-3 w-10 h-10 text-brown opacity-30 -rotate-12 z-20" viewBox="0 0 24 24"><use href="#icon-teddy"></use></svg>
-      <svg class="absolute right-4 bottom-4 w-10 h-10 rotate-45 opacity-30" viewBox="0 0 100 100"><use href="#icon-button"></use></svg>
-      <h2 class="text-xl font-medium mb-2 flex items-center justify-center gap-2 relative z-10 text-brown">
-        <i data-lucide="laptop" class="w-5 h-5 shrink-0 text-brown"></i>
-        คอร์สสอนทำเว็บสไตล์ทิ้งจู
-      </h2>
-      <p class="text-sm text-brown-light mb-4 relative z-10">สอนตั้งแต่ 0 จนทำเป็นเว็บใช้งานได้จริง<br>มีเทมเพลตให้กว่า 5 แบบ แทบจะจับมือสอน</p>
-      <div class="inline-block bg-pinky-light/50 border border-pinky-light text-brown font-semibold px-5 py-1.5 rounded-full text-sm mb-5 shadow-sm relative z-10">
-        ราคาพิเศษ 299.- <span class="line-through text-brown-light text-xs ml-1 font-normal">399.-</span>
-      </div>
-      <div class="flex flex-col gap-2 relative z-10">
-        <a href="https://drive.google.com/drive/folders/1fj024BhkgC1ctJeiwyZUG3USteSdzWzr" target="_blank" class="bg-brown text-white text-xs py-2.5 px-4 rounded-xl hover:bg-brown-dark transition flex items-center justify-center gap-2 shadow-sm">
-          <i data-lucide="folder-open" class="w-4 h-4 shrink-0"></i> ดูรายละเอียดคอร์ส
-        </a>
-        <a href="https://purple-wind-aced.cozyw75.workers.dev/" target="_blank" class="bg-cream border border-purpley text-brown text-xs py-2.5 px-4 rounded-xl hover:bg-pinky-light/50 transition flex items-center justify-center gap-2 shadow-sm">
-          <i data-lucide="book-open" class="w-4 h-4 text-brown shrink-0"></i> อ่านกฎก่อนเข้าคอร์ส
-        </a>
-      </div>
-    </section>
-
-    <!-- ซ่อนส่วน Goodnotes -->
-    <section class="hidden relative">
-      <h2 class="text-xl font-medium mb-5 flex items-center gap-2 border-b-2 border-pinky-light pb-2 mt-8 text-brown">
-        <i data-lucide="pen-tool" class="w-5 h-5 text-pinky-dark"></i>
-        แอปพลิเคชัน Goodnotes
-      </h2>
-      <div class="space-y-5">
-        <div class="bg-white border-2 border-pinky-light rounded-2xl p-5 shadow-sm relative overflow-hidden">
-          <svg class="absolute -right-3 -top-3 w-10 h-10 rotate-12 drop-shadow-sm opacity-80" viewBox="0 0 100 100"><use href="#icon-button"></use></svg>
-          <div class="absolute top-0 right-4 bg-pinky text-white text-[10px] px-3 py-1 rounded-b-lg font-medium shadow-sm z-10">ถาวร (iOS)</div>
-          <h3 class="font-medium text-lg text-brown mb-2 mt-1 relative z-10">รุ่นพิเศษ</h3>
-          <ul class="text-xs text-brown-light space-y-1.5 mb-4 list-disc list-inside relative z-10">
-            <li>สมุดโน้ต ไวท์บอร์ด เอกสาร ไม่จํากัด</li>
-            <li>แชร์ลิงก์สาธารณะได้</li>
-            <li>ถอดเสียงไม่จํากัด</li>
-          </ul>
-          <div class="flex flex-wrap gap-2 text-sm font-medium relative z-10">
-            <span class="bg-cream border border-pinky-light px-3 py-1 rounded-lg text-brown">เมลรวม 20.-</span>
-            <span class="bg-cream border border-pinky-light px-3 py-1 rounded-lg text-brown">หาร 5 คน 149.-</span>
-            <span class="bg-pinky text-white px-3 py-1 rounded-lg shadow-sm">ส่วนตัว 490.-</span>
-          </div>
-        </div>
-
-        <div class="bg-white border-2 border-pinky-light rounded-2xl p-5 shadow-sm relative overflow-hidden">
-          <svg class="absolute -left-3 -bottom-3 w-10 h-10 -rotate-12 drop-shadow-sm opacity-80" viewBox="0 0 100 100"><use href="#icon-button"></use></svg>
-          <div class="absolute top-0 right-4 bg-[#BFA094] text-white text-[10px] px-3 py-1 rounded-b-lg font-medium shadow-sm z-10">รายปี (ทุกระบบ)</div>
-          <h3 class="font-medium text-lg text-brown mb-2 mt-1">Essential</h3>
-          <ul class="text-xs text-brown-light space-y-1.5 mb-4 list-disc list-inside relative z-10">
-            <li>ปลดล็อกฟีเจอร์จดบันทึกครบ</li>
-            <li>ค้นคว้าคณิตศาสตร์ด้วย AI (525 เครดิต)</li>
-            <li>เข้าถึงได้ทั้ง iOS, Android, Windows, Web</li>
-          </ul>
-          <div class="flex flex-wrap gap-2 text-sm font-medium relative z-10">
-            <span class="bg-cream border border-pinky-light px-3 py-1 rounded-lg text-brown">เมลรวม 20.-</span>
-            <span class="bg-cream border border-pinky-light px-3 py-1 rounded-lg text-brown">หาร 5 คน 79.-</span>
-            <span class="bg-pinky text-white px-3 py-1 rounded-lg shadow-sm">ส่วนตัว 229.-</span>
-          </div>
-        </div>
-
-        <div class="bg-pinky-light/20 border-2 border-pinky-dark rounded-2xl p-5 shadow-sm relative overflow-hidden">
-          <div class="absolute top-0 right-4 bg-pinky-dark text-white text-[10px] px-3 py-1 rounded-b-lg font-medium shadow-sm z-10">รายปี (ทุกระบบ)</div>
-          <h3 class="font-medium text-lg text-brown mb-2 mt-1 flex items-center gap-1 relative z-10">Pro <i data-lucide="star" class="w-4 h-4 text-pinky-dark fill-pinky-dark shrink-0"></i></h3>
-          <ul class="text-xs text-brown-light space-y-1.5 mb-4 list-disc list-inside relative z-10">
-            <li>มีครบทุกอย่างใน Essential</li>
-            <li>จดโน้ตอัตโนมัติ & สรุปแบบเรียลไทม์</li>
-            <li>เชื่อมต่อ Google Calendar</li>
-            <li>แชร์ลิงก์ส่วนตัว ทํางานร่วมกันเรียลไทม์</li>
-          </ul>
-          <div class="flex flex-wrap gap-2 text-sm font-medium relative z-10">
-            <span class="bg-white border border-pinky-light px-3 py-1 rounded-lg text-brown">เมลรวม 20.-</span>
-            <span class="bg-white border border-pinky-light px-3 py-1 rounded-lg text-brown">หาร 5 คน 149.-</span>
-            <span class="bg-pinky text-white px-3 py-1 rounded-lg shadow-sm">ส่วนตัว 490.-</span>
-          </div>
-        </div>
-      </div>
-      <p class="text-[10px] text-pinky-dark text-center mt-4 bg-white py-1.5 rounded-full shadow-sm">*แนะนำแบบส่วนตัว หากใช้ระบบ Android/Windows/Web ค่ะ</p>
     </section>
 
   </main>
@@ -589,9 +498,6 @@ body {
           LINE
         </a>
       </div>
-      <a href="https://www.instagram.com/pinkjulie.land" target="_blank" class="hidden w-[140px] bg-[#E8A0BF] text-white py-3 rounded-full text-[11px] font-bold tracking-wider hover:-translate-y-1 transition-transform shadow-md flex justify-center items-center uppercase">
-        INSTAGRAM
-      </a>
     </div>
     <p class="text-[13px] font-medium text-brown flex items-center justify-center gap-1.5 italic">
       ขอบคุณที่ไว้วางใจ Miori Shop <i data-lucide="star" class="w-3.5 h-3.5 text-brown fill-pinky-light opacity-80"></i>
@@ -695,6 +601,9 @@ body {
   </div>
 </div>
 
+<!-- โหลด YouTube IFrame Player API -->
+<script src="https://www.youtube.com/iframe_api"></script>
+
 <!-- Data & Scripts -->
 <script>
 lucide.createIcons();
@@ -773,8 +682,24 @@ function closeModal(modalId) {
   });
 });
 
+/* ระบบ YouTube Music Player Integration */
+let player;
 let isPlaying = false;
 let noteInterval = null;
+
+function onYouTubeIframeAPIReady() {
+  player = new YT.Player('youtubePlayer', {
+    height: '0',
+    width: '0',
+    videoId: 'gnujuvJXaIg',
+    playerVars: {
+      'autoplay': 0,
+      'controls': 0,
+      'loop': 1,
+      'playlist': 'gnujuvJXaIg'
+    }
+  });
+}
 
 function createFloatingNote() {
   const container = document.getElementById('notesContainer');
@@ -797,14 +722,18 @@ function createFloatingNote() {
 }
 
 function toggleMusic() {
-  const music = document.getElementById('bgMusic');
   const clefIcon = document.getElementById('clefIcon');
+  
   if (isPlaying) {
-    music.pause();
+    if (player && player.pauseVideo) {
+      player.pauseVideo();
+    }
     clefIcon.classList.remove('animate-clef-playing');
     clearInterval(noteInterval);
   } else {
-    music.play().catch(() => {});
+    if (player && player.playVideo) {
+      player.playVideo();
+    }
     clefIcon.classList.add('animate-clef-playing');
     createFloatingNote();
     noteInterval = setInterval(createFloatingNote, 600);
