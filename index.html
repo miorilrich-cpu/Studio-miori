@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE <!DOCTYPE html>
 <html lang="th">
 <head>
 <meta charset="UTF-8">
@@ -130,17 +130,7 @@ body {
 <div class="hidden">
   <div id="youtubePlayer"></div>
 </div>
-<!-- ปุ่มเปิดเพลง (เปลี่ยนสีเป็นชมพูอ่อนพาสเทลๆ และย้ายไปมุมขวาบน) -->
-<div class="fixed top-4 right-4 z-50">
-  <button id="musicToggle" onclick="toggleMusic()" class="w-12 h-12 bg-white rounded-full p-1 shadow-md border-2 border-[#FFC9E5] flex items-center justify-center hover:scale-110 active:scale-95 transition-all group relative">
-    <div class="w-full h-full rounded-full border-2 border-[#FFE6F2] bg-[#FFE6F2] flex items-center justify-center">
-      <div id="cleficon" class="flex items-center justify-center text-[#A05990] transition-transform">
-        <i data-lucide="music" class="w-5 h-5 stroke-[2.5]"></i>
-      </div>
-    </div>
-    <div id="notesContainer" class="absolute inset-0 pointer-events-none"></div>
-  </button>
-</div>
+
 <!-- Custom Theme SVGS -->
 <svg width="0" height="0" class="hidden absolute pointer-events-none">
   <symbol id="icon-teddy" viewBox="0 0 24 24" fill="currentColor">
@@ -172,6 +162,19 @@ body {
   </symbol>
 </svg>
 <div class="max-w-md mx-auto min-h-screen bg-cream shadow-xl relative overflow-hidden">
+  
+  <!-- ปุ่มเปิดเพลง (มุมขวาบน ภายในกรอบ max-w-md) -->
+  <div class="absolute top-4 right-4 z-50">
+    <button id="musicToggle" onclick="toggleMusic()" class="w-12 h-12 bg-white rounded-full p-1 shadow-md border-2 border-[#FFC9E5] flex items-center justify-center hover:scale-110 active:scale-95 transition-all group relative">
+      <div class="w-full h-full rounded-full border-2 border-[#FFE6F2] bg-[#FFE6F2] flex items-center justify-center">
+        <div id="cleficon" class="flex items-center justify-center text-[#A05990] transition-transform">
+          <i data-lucide="music" class="w-5 h-5 stroke-[2.5]"></i>
+        </div>
+      </div>
+      <div id="notesContainer" class="absolute inset-0 pointer-events-none"></div>
+    </button>
+  </div>
+
   <!-- BACKGROUND DECORATIONS -->
   <div class="absolute inset-0 pointer-events-none z-0 overflow-hidden opacity-70">
     <svg class="absolute top-[2%] left-[8%] w-10 h-10 text-pinky animate-float opacity-40" viewBox="0 0 24 24"><use href="#icon-teddy"></use></svg>
@@ -283,7 +286,7 @@ body {
         </button>
       </div>
     </section>
-    <!-- รูปแบรนเนอร์ (เปลี่ยนสีกรอบรูปภาพแบรนเนอร์ให้เป็นสีขาว) -->
+    <!-- รูปแบรนเนอร์ -->
     <section class="w-full">
       <div class="rounded-3xl overflow-hidden border-2 border-white shadow-card bg-white">
         <img src="ไม่มีชื่อ 80_20260925012941.png" alt="Banner" class="w-full h-auto object-cover hover:scale-105 transition-transform duration-500" onerror="this.onerror=null; this.src='https://placehold.co/2400x800/FFE6F2/A05990?text=Banner+2400x800';">
@@ -606,7 +609,6 @@ function openPaymentModal() {
 function closeModal(modalId) {
   const targetModal = document.getElementById(modalId);
   targetModal.classList.add('opacity-0');
-  targetModal.classList.0 = 'active'; // keep logic intact
   targetModal.classList.remove('active');
   setTimeout(() => {
     targetModal.classList.add('invisible');
@@ -686,4 +688,3 @@ function toggleMusic() {
 </script>
 </body>
 </html>
-
