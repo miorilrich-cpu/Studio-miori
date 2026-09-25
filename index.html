@@ -130,7 +130,7 @@ body {
 <div class="hidden">
   <div id="youtubePlayer"></div>
 </div>
-<!-- ปุ่มเปิดเพลง (มุมขวาบน - เลื่อนตามหน้าจอ) -->
+<!-- ปุ่มเปิดเพลง (มุมขวาบน - เลื่อนตามหน้าจอ, ไม่มีอิโมจิหัวใจสีแดง) -->
 <div class="fixed top-4 right-4 z-50">
   <button id="musicToggle" onclick="toggleMusic()" class="w-12 h-12 bg-white rounded-full p-1 shadow-md border-2 border-[#FFC9E5] flex items-center justify-center hover:scale-110 active:scale-95 transition-all group relative">
     <div class="w-full h-full rounded-full border-2 border-[#FFE6F2] bg-[#FFE6F2] flex items-center justify-center">
@@ -274,7 +274,7 @@ body {
           </div>
           <span class="font-medium text-xs text-brown group-hover:text-brown-dark text-center leading-tight">ลายน้ำ</span>
         </a>
-        <!-- 6. ฟอนต์ -->
+        <!-- 6. ฟอนด์ -->
         <button onclick="openModal('fonts')" class="aspect-square bg-white hover:bg-pinky-light border-2 border-pinky-light rounded-2xl p-2 flex flex-col items-center justify-center shadow-sm group transition-all hover:scale-105">
           <div class="w-9 h-9 rounded-xl bg-pinky-light flex items-center justify-center mb-1">
             <i data-lucide="type" class="w-5 h-5 text-brown"></i>
@@ -329,12 +329,9 @@ body {
           <li class="flex justify-between items-center bg-cream p-2.5 rounded-lg"><span class="text-brown">ป้ายแนวมืด</span> <span class="font-medium text-brown">เริ่มต้น 89.-</span></li>
           <li class="flex justify-between items-center bg-cream p-2.5 rounded-lg"><span class="text-brown">ป้ายเรทราคา</span> <span class="font-medium text-brown">เริ่มต้น 99.-</span></li>
         </ul>
-        <div class="bg-pinky-light/40 rounded-xl p-3 text-xs border border-pinky-light relative z-10 flex items-center justify-between">
-          <div>
-            <p class="font-medium mb-1 flex items-center gap-1 text-brown"><i data-lucide="plus-circle" class="w-4 h-4 text-brown"></i> Add on เพิ่มเดิม</p>
-            <p class="text-brown-light ml-1 font-medium">มีราคาเหมา 3 ป้ายขึ้นไป</p>
-          </div>
-          <span class="bg-pink text-white text-[10px] px-2 py-0.5 rounded-full font-bold shadow-sm">พิเศษ</span>
+        <div class="bg-pinky-light/40 rounded-xl p-3 text-xs border border-pinky-light relative z-10">
+          <p class="font-medium mb-1 flex items-center gap-1 text-brown"><i data-lucide="plus-circle" class="w-4 h-4 text-brown"></i> Add on เพิ่มเดิม</p>
+          <p class="text-brown-light ml-1 font-medium">มีราคาพิเศษเหมา 3 ป้ายขึ้นไป</p>
         </div>
         <div class="text-[11px] text-brown-light space-y-1.5 pt-2 relative z-10">
           <p class="flex items-start gap-1"><i data-lucide="check" class="w-3.5 h-3.5 mt-0.5 text-brown shrink-0"></i> <span>แก้ไขข้อมูลหลังส่งตรวจสอบ ฟรี 1 ครั้ง</span></p>
@@ -534,7 +531,7 @@ body {
           </div>
           <div class="flex items-center justify-between bg-cream px-2.5 py-1 rounded-xl border border-pinky-light">
             <span class="font-medium text-brown text-xs">โอนเงินให้คนสวย</span>
-            <button onclick="navigator.clipboard.writeText('โอนเงินให้คนสวย'); alert('คัดลอกข้อความโน้ตสลิปแล้ว!');" class="bg-pink hover:bg-pinky-dark text-white text-[10px] px-2 py-0.5 rounded-md font-medium transition-colors shadow-sm">
+            <button onclick="navigator.clipboard.writeText('โอนเงินให้คนสวย'); alert('คัดลอกข้อความโน้ตสลิปแล้ว!');" class="bg-pinky hover:bg-pinky-dark text-white text-[10px] px-2 py-0.5 rounded-md font-medium transition-colors shadow-sm">
               คัดลอก
             </button>
           </div>
@@ -655,7 +652,7 @@ function createFloatingNote() {
   const container = document.getElementById('notesContainer');
   if (!container) return;
   const note = document.createElement('span');
-  const symbols = ['♫', '♪', '♬', '♥'];
+  const symbols = ['♫', '♪', '♬'];
   note.innerText = symbols[Math.floor(Math.random() * symbols.length)];
   note.className = 'music-note';
   const randomX = (Math.random() * 40 - 20) + 'px';
@@ -688,4 +685,3 @@ function toggleMusic() {
 </script>
 </body>
 </html>
-
