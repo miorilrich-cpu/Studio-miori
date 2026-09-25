@@ -14,127 +14,128 @@
 <script src="https://unpkg.com/lucide@latest"></script>
 <script>
 tailwind.config = {
-  theme: {
-    extend: {
-      fontFamily: {
-        sans: ['Mitr', 'sans-serif'],
-      },
-      colors: {
-        cream: '#FFF0F5',
-        pinky: {
-          light: '#FFD1DC',
-          DEFAULT: '#FFB6C1',
-          dark: '#FF91A4'
-        },
-        purpley: {
-          light: '#FFE4E1',
-          DEFAULT: '#FFC0CB',
-          dark: '#E0A9B5'
-        },
-        brown: {
-          light: '#C77993',
-          DEFAULT: '#A65573',
-          dark: '#803D55'
-        },
-        heart: '#FF69B4',
-        light: '#FFE4E1',
-        DEFAULT: '#FFB6C1',
-        dark: '#FF91A4'
-      },
-      boxShadow: {
-        'soft': '0 4px 20px 2px rgba(166, 85, 115, 0.15)',
-        'card': '0 10px 25px 5px rgba(166, 85, 115, 0.1)',
-        'polaroid': '0 4px 10px rgba(166, 85, 115, 0.1)',
-      }
-    }
-  }
+theme: {
+extend: {
+fontFamily: {
+sans: ['Mitr', 'sans-serif'],
+},
+colors: {
+cream: '#FFF5F9',
+pinky: {
+light: '#FFE6F2',
+DEFAULT: '#FFC9E5',
+dark: '#E67BB3'
+},
+light: '#FFE6F2',
+DEFAULT: '#FFC9E5',
+dark: '#E67BB3',
+heart: '#FF99C8',
+purpley: {
+light: '#FFF0F7',
+DEFAULT: '#FFC9E5',
+dark: '#D86B9E'
+},
+brown: {
+light: '#C274B3',
+DEFAULT: '#A05990',
+dark: '#803F72'
+}
+}
+},
+boxShadow: {
+'soft': '0 4px 20px 2px rgba(160, 89, 144, 0.25)',
+'card': '0 10px 25px 5px rgba(160, 89, 144, 0.2)',
+'polaroid': '0 4px 10px rgba(160, 89, 144, 0.15)',
+}
+}
+}
 }
 </script>
 <style>
 body {
-  background-color: #FFF0F5;
-  color: #A65573;
+background-color: #FFF5F9;
+color: #A05990;
 }
 ::-webkit-scrollbar {
-  width: 8px;
+width: 8px;
 }
 ::-webkit-scrollbar-track {
-  background: #FFF0F5;
+background: #FFF5F9;
 }
 ::-webkit-scrollbar-thumb {
-  background: #A65573;
-  border-radius: 10px;
+background: #FFC9E5;
+border-radius: 10px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #803D55;
+background: #E67BB3;
 }
 .modal {
-  transition: opacity 0.3s ease, visibility 0.3s ease;
+transition: opacity 0.3s ease, visibility 0.3s ease;
 }
 .modal-content {
-  transition: transform 0.3s ease;
-  transform: translateY(20px) scale(0.95);
+transition: transform 0.3s ease;
+transform: translateY(20px) scale(0.95);
 }
 .modal.active .modal-content {
-  transform: translateY(0) scale(1);
+transform: translateY(0) scale(1);
 }
 @keyframes float {
-  0%, 100% { transform: translateY(0px) rotate(0deg); }
-  50% { transform: translateY(-15px) rotate(5deg); }
+0%, 100% { transform: translateY(0px) rotate(0deg); }
+50% { transform: translateY(-15px) rotate(5deg); }
 }
 @keyframes float-reverse {
-  0%, 100% { transform: translateY(0px) rotate(0deg); }
-  50% { transform: translateY(15px) rotate(-8deg); }
+0%, 100% { transform: translateY(0px) rotate(0deg); }
+50% { transform: translateY(15px) rotate(-8deg); }
 }
 @keyframes float-slow {
-  0%, 100% { transform: translateY(0px) scale(1); }
-  50% { transform: translateY(-8px) scale(1.05); }
+0%, 100% { transform: translateY(0px) scale(1); }
+50% { transform: translateY(-8px) scale(1.05); }
 }
 .animate-float { animation: float 4s ease-in-out infinite; }
 .animate-float-delayed { animation: float 4s ease-in-out 2s infinite; }
 .animate-float-reverse { animation: float-reverse 5s ease-in-out 1s infinite; }
 .animate-float-slow { animation: float-slow 6s ease-in-out infinite; }
 @keyframes clef-bounce {
-  0%, 100% { transform: scale(1) rotate(0deg); }
-  50% { transform: scale(1.12) rotate(10deg); }
+0%, 100% { transform: scale(1) rotate(0deg); }
+50% { transform: scale(1.12) rotate(10deg); }
 }
 .animate-clef-playing {
-  animation: clef-bounce 0.8s ease-in-out infinite;
+animation: clef-bounce 0.8s ease-in-out infinite;
 }
 @keyframes note-float {
-  0% {
-    opacity: 1;
-    transform: translateY(0) scale(0.6) rotate(0deg);
-  }
-  50% {
-    opacity: 0.8;
-    transform: translateY(-25px) translateX(10px) scale(1.1) rotate(15deg);
-  }
-  100% {
-    opacity: 0;
-    transform: translateY(-50px) translateX(-10px) scale(0.8) rotate(-15deg);
-  }
+0% {
+opacity: 1;
+transform: translateY(0) scale(0.6) rotate(0deg);
+}
+50% {
+opacity: 0.8;
+transform: translateY(-25px) translateX(10px) scale(1.1) rotate(15deg);
+}
+100% {
+opacity: 0;
+transform: translateY(-50px) translateX(-10px) scale(0.8) rotate(-15deg);
+}
 }
 .music-note {
-  position: absolute;
-  pointer-events: none;
-  color: #A65573;
-  font-size: 14px;
-  font-weight: bold;
-  animation: note-float 2s ease-out infinite;
+position: absolute;
+pointer-events: none;
+color: #A05990;
+font-size: 14px;
+font-weight: bold;
+animation: note-float 2s ease-out infinite;
 }
 </style>
 </head>
 <body class="antialiased selection:bg-pinky selection:text-white relative">
-<!-- ซ่อน YouTube Player สำหรับเล่นเพลง -->
+<!-- ซ่อน YouTube Player สำหรับเล่นเพลง ayumi hamasaki - Who... "Across the Universe" -->
 <div class="hidden">
 <div id="youtubePlayer"></div>
 </div>
-<!-- ปุ่มเปิดเพลง (ปรับโทนสีชมพูพาสเทล) -->
+<!-- ปุ่มเปิดเพลง -->
 <div class="fixed bottom-4 left-4 z-50">
-<button id="musicToggle" onclick="toggleMusic()" class="w-12 h-12 bg-white rounded-full p-1 shadow-md border-2 border-[#FFB6C1] flex items-center justify-center hover:scale-110 active:scale-95 transition-all group relative">
-<div class="w-full h-full rounded-full border-2 border-[#FFD1DC] bg-[#FFF0F5] flex items-center justify-center">
-<div id="cleficon" class="flex items-center justify-center text-[#A65573] transition-transform">
+<button id="musicToggle" onclick="toggleMusic()" class="w-12 h-12 bg-white rounded-full p-1 shadow-md border-2 border-[#FFC9E5] flex items-center justify-center hover:scale-110 active:scale-95 transition-all group relative">
+<div class="w-full h-full rounded-full border-2 border-[#FFE6F2] bg-[#FFC9E5] flex items-center justify-center">
+<div id="cleficon" class="flex items-center justify-center text-[#A05990] transition-transform">
 <i data-lucide="music" class="w-5 h-5 stroke-[2.5]"></i>
 </div>
 </div>
@@ -145,29 +146,29 @@ body {
 <svg width="0" height="0" class="hidden absolute pointer-events-none">
 <symbol id="icon-teddy" viewBox="0 0 24 24" fill="currentColor">
 <circle cx="6" cy="7" r="3.5"/>
-<circle cx="6" cy="7" r="1.5" fill="#FFF0F5" />
+<circle cx="6" cy="7" r="1.5" fill="#FFF5F9" />
 <circle cx="18" cy="7" r="3.5"/>
-<circle cx="18" cy="7" r="1.5" fill="#FFF0F5" />
+<circle cx="18" cy="7" r="1.5" fill="#FFF5F9" />
 <path d="M12 6C6 4 10 4 15C4 20 7 22.5 12 22.5C17 22.5 20 20 20 15C20 10 17 6 12 6Z" />
-<circle cx="8.5" cy="12" r="1.2" fill="#FFF0F5" />
-<circle cx="15.5" cy="12" r="1.2" fill="#FFF0F5" />
-<ellipse cx="12" cy="16.5" rx="4" ry="3" fill="#FFF0F5" />
-<ellipse cx="12" cy="15" rx="1.5" ry="1" fill="#A65573" />
-<path d="M12 16v1.5M10.5 18c.5.5 2.5.5 3 0" stroke="#A65573" stroke-width="1.2" fill="none" stroke-linecap="round" />
+<circle cx="8.5" cy="12" r="1.2" fill="#FFF5F9" />
+<circle cx="15.5" cy="12" r="1.2" fill="#FFF5F9" />
+<ellipse cx="12" cy="16.5" rx="4" ry="3" fill="#FFF5F9" />
+<ellipse cx="12" cy="15" rx="1.5" ry="1" fill="#A05990" />
+<path d="M12 16v1.5M10.5 18c.5.5 2.5.5 3 0" stroke="#A05990" stroke-width="1.2" fill="none" stroke-linecap="round" />
 </symbol>
 <symbol id="icon-button" viewBox="0 0 100 100">
-<circle cx="50" cy="50" r="46" fill="#FFF0F5" />
-<circle cx="50" cy="50" r="42" fill="#FFD1DC" />
-<circle cx="50" cy="50" r="28" fill="#FFF0F5" />
-<circle cx="50" cy="50" r="28" fill="none" stroke="#FFC0CB" stroke-width="2" />
+<circle cx="50" cy="50" r="46" fill="#FFC9E5" />
+<circle cx="50" cy="50" r="42" fill="#FFE6F2" />
+<circle cx="50" cy="50" r="28" fill="#FFF5F9" />
+<circle cx="50" cy="50" r="28" fill="none" stroke="#FFC9E5" stroke-width="2" />
 <circle cx="40" cy="40" r="5.5" fill="#FFFFFF" />
 <circle cx="60" cy="40" r="5.5" fill="#FFFFFF" />
 <circle cx="40" cy="60" r="5.5" fill="#FFFFFF" />
 <circle cx="60" cy="60" r="5.5" fill="#FFFFFF" />
-<path d="M38 39 L62 63 M62 39 L38 63" stroke="#A65573" stroke-width="8" stroke-linecap="round"/>
+<path d="M38 39 L62 63 M62 39 L38 63" stroke="#A05990" stroke-width="8" stroke-linecap="round"/>
 <path d="M38 38 L62 62 M62 38 L38 62" stroke="#FFFFFF" stroke-width="8" stroke-linecap="round"/>
 </symbol>
-<symbol id="icon-heart-cute" viewBox="0 0 24 24" fill="#FF69B4">
+<symbol id="icon-heart-cute" viewBox="0 0 24 24" fill="#FF99C8">
 <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
 </symbol>
 </svg>
@@ -225,9 +226,9 @@ Open 10:00 a.m - Close 22:00 p.m
 </p>
 <!-- Badges -->
 <div class="flex flex-wrap justify-center gap-2 mt-3">
-<span class="text-xs bg-white border border-pinky/60 text-brown px-3 py-1 rounded-full shadow-sm hover:scale-105 transition-transform cursor-pointer font-medium">รับทำลายน้ำ</span>
-<span class="text-xs bg-white border border-pinky/60 text-brown px-3 py-1 rounded-full shadow-sm hover:scale-105 transition-transform cursor-pointer font-medium">รับทําป้าย</span>
-<span class="text-xs bg-white border border-pinky/60 text-brown px-3 py-1 rounded-full shadow-sm hover:scale-105 transition-transform cursor-pointer font-medium">รับดึงเข้ากลุ่ม</span>
+<span class="text-xs bg-white border border-pinky text-brown px-3 py-1 rounded-full shadow-sm hover:scale-105 transition-transform cursor-pointer font-medium">รับทำลายน้ำ</span>
+<span class="text-xs bg-white border border-pinky text-brown px-3 py-1 rounded-full shadow-sm hover:scale-105 transition-transform cursor-pointer font-medium">รับทําป้าย</span>
+<span class="text-xs bg-white border border-pinky text-brown px-3 py-1 rounded-full shadow-sm hover:scale-105 transition-transform cursor-pointer font-medium">รับดึงเข้ากลุ่ม</span>
 </div>
 </section>
 <!-- Portfolio Section -->
@@ -315,14 +316,14 @@ Open 10:00 a.m - Close 22:00 p.m
 <div class="bg-white rounded-3xl shadow-card p-6 space-y-4 border-2 border-pinky-light relative">
 <svg class="absolute top-4 right-4 w-8 h-8 -rotate-12 drop-shadow-sm" viewBox="0 0 100 100"><use href="#icon-button"></use></svg>
 <svg class="absolute top-1/2 -left-3 w-8 h-8 bg-white rounded-full drop-shadow-sm p-1" viewBox="0 0 24 24"><use href="#icon-heart-cute"></use></svg>
-<div class="flex items-end justify-between border-b border-dashed border-pinky/60 pb-3 relative z-10">
+<div class="flex items-end justify-between border-b border-dashed border-pinky pb-3 relative z-10">
 <div>
 <span class="block font-medium text-xl text-brown">Start</span>
 <span class="text-[11px] text-brown-light">ลายน้ำน่ารักๆ ไว้ใส่ในตัวอย่างสินค้าเท่านั้น</span>
 </div>
 <span class="text-2xl font-medium text-brown">39.-</span>
 </div>
-<p class="font-medium text-xs text-brown pt-1 relative z-10">เรทราคาต่างๆ</p>
+<p class="font-medium text-xs text-brown pt-1 relative z-10">เรทราคาด่างๆ</p>
 <ul class="space-y-2.5 text-xs relative z-10">
 <li class="flex justify-between items-center bg-cream p-2.5 rounded-lg"><span class="text-brown">ป้ายแนวน่ารัก</span> <span class="font-medium text-brown">เริ่มต้น 59.-</span></li>
 <li class="flex justify-between items-center bg-cream p-2.5 rounded-lg"><span class="text-brown">ป้ายแนวสว่าง</span> <span class="font-medium text-brown">เริ่มต้น 89.-</span></li>
@@ -330,7 +331,7 @@ Open 10:00 a.m - Close 22:00 p.m
 <li class="flex justify-between items-center bg-cream p-2.5 rounded-lg"><span class="text-brown">ป้ายเรทราคา</span> <span class="font-medium text-brown">เริ่มต้น 99.-</span></li>
 </ul>
 <div class="bg-pinky-light/40 rounded-xl p-3 text-xs border border-pinky-light relative z-10">
-<p class="font-medium mb-1 flex items-center gap-1 text-brown"><i data-lucide="plus-circle" class="w-4 h-4 text-brown"></i> Add on เพิ่มเติม</p>
+<p class="font-medium mb-1 flex items-center gap-1 text-brown"><i data-lucide="plus-circle" class="w-4 h-4 text-brown"></i> Add on เพิ่มเดิม</p>
 <p class="text-brown-light ml-1 font-medium">มีราคาเหมา 3 ป้ายขึ้นไป</p>
 </div>
 <div class="text-[11px] text-brown-light space-y-1.5 pt-2 relative z-10">
@@ -342,7 +343,7 @@ Open 10:00 a.m - Close 22:00 p.m
 <ul class="list-disc list-inside text-[10.5px] text-brown-light ml-1 space-y-0.5">
 <li>ข้อความแก้จุดละ 10.-</li>
 <li>เปลี่ยนฟอนต์หัวป้าย 39.-</li>
-<li>เปลี่ยนโน้ตเท่ากับราคาป้าย</li>
+<li>เปลี่ยน นเท่ากับราคาป้าย</li>
 </ul>
 </div>
 </div>
@@ -390,7 +391,7 @@ Open 10:00 a.m - Close 22:00 p.m
 </div>
 <!-- หมายเหตุลิขสิทธิ์ -->
 <p class="text-[9.5px] text-brown-light text-center leading-relaxed px-2 italic pt-1">
-หมายเหตุ: งดนำป้ายไปขาย แจก ดัดแปลง หรือเจน หรือเข้าระบบ Ai เพราะงานทุกชิ้นมีลิขสิทธิ์ หากตรวจพบการละเมิด ทางร้านขอดำเนินคดีตามกฎหมาย
+หมายเหตุ: งดน่าป้ายไปขาย แจก ดัดแปลง หรือ เจน หรือเข้าระบบ Ai เพราะงานทุกชิ้นมีลิขสิทธิ์ หากตรวจพบการละเมิด ทางร้านขอดำเนินคดีตามกฎหมาย
 </p>
 </section>
 <!-- ปุ่มช่องทางการโอนเงิน -->
@@ -405,29 +406,29 @@ Open 10:00 a.m - Close 22:00 p.m
 <i data-lucide="chevron-right" class="w-5 h-5 text-brown"></i>
 </button>
 </section>
-<!-- Work parts (ปรับปุ่ม หมา แมว หมู เป็นเส้นปรุ น่ารักๆ ตามเงื่อนไข) -->
-<section class="bg-white rounded-3xl p-5 border-2 border-solid border-pinky/60 shadow-sm text-center">
+<!-- Work parts -->
+<section class="bg-white rounded-3xl p-5 border-2 border-solid border-pinky shadow-sm text-center">
 <h3 class="font-medium text-brown text-sm flex items-center justify-center gap-1.5">
 <i data-lucide="sparkles" class="w-4 h-4 text-brown"></i> Work parts
 </h3>
 <p class="text-[10px] text-brown-light font-medium italic mt-0.5 mb-4">เลือกชิ้นส่วนประกอบงานตรงนี้</p>
 <div class="grid grid-cols-3 gap-3">
-<!-- โพลารอยด์ 1 (หมา - เส้นปรุ) -->
-<a href="https://drive.google.com/drive/folders/10wVjpHKCr8rMZ-UoCd5G_ALC13AUC1Qk" target="_blank" class="bg-white hover:bg-pinky-light/30 border-2 border-dashed border-pinky rounded-2xl p-2.5 shadow-polaroid flex flex-col items-center justify-center text-center transition-all hover:scale-105 active:scale-95 group">
+<!-- โพลารอยด์ 1 -->
+<a href="https://drive.google.com/drive/folders/10wVjpHKCr8rMZ-UoCd5G_ALC13AUC1Qk" target="_blank" class="bg-white hover:bg-pinky-light/30 border border-brown/20 rounded-2xl p-2.5 shadow-polaroid flex flex-col items-center justify-center text-center transition-all hover:scale-105 active:scale-95 group">
 <div class="w-full aspect-square bg-cream rounded-xl border-2 border-dashed border-pinky-light flex items-center justify-center mb-2 p-2">
 <i data-lucide="dog" class="w-8 h-8 text-brown group-hover:text-brown-dark transition-colors stroke-[1.75]"></i>
 </div>
-<span class="text-[10px] font-medium text-brown group-hover:text-brown-dark transition-colors leading-tight">Block 1</span>
+<span class="text-[10px] font-medium text-brown group-hover:text-brown-dark transition-colors leading-tight">Block 2</span>
 </a>
-<!-- โพลารอยด์ 2 (แมว - เส้นปรุ) -->
-<a href="https://drive.google.com/drive/folders/1T36yZKLHN5huKfwu1NYW_PVLLsswHTID" target="_blank" class="bg-white hover:bg-pinky-light/30 border-2 border-dashed border-pinky rounded-2xl p-2.5 shadow-polaroid flex flex-col items-center justify-center text-center transition-all hover:scale-105 active:scale-95 group">
+<!-- โพลารอยด์ 2 -->
+<a href="https://drive.google.com/drive/folders/1T36yZKLHN5huKfwu1NYW_PVLLsswHTID" target="_blank" class="bg-white hover:bg-pinky-light/30 border border-brown/20 rounded-2xl p-2.5 shadow-polaroid flex flex-col items-center justify-center text-center transition-all hover:scale-105 active:scale-95 group">
 <div class="w-full aspect-square bg-cream rounded-xl border-2 border-dashed border-pinky-light flex items-center justify-center mb-2 p-2">
 <i data-lucide="cat" class="w-8 h-8 text-brown group-hover:text-brown-dark transition-colors stroke-[1.75]"></i>
 </div>
 <span class="text-[10px] font-medium text-brown group-hover:text-brown-dark transition-colors leading-tight">Toon</span>
 </a>
-<!-- โพลารอยด์ 3 (หมู - เส้นปรุ) -->
-<a href="https://drive.google.com/drive/folders/1YLsW06GXE_ENus4ad8AUNU4FEM74Z2vl" target="_blank" class="bg-white hover:bg-pinky-light/30 border-2 border-dashed border-pinky rounded-2xl p-2.5 shadow-polaroid flex flex-col items-center justify-center text-center transition-all hover:scale-105 active:scale-95 group">
+<!-- โพลารอยด์ 3 -->
+<a href="https://drive.google.com/drive/folders/1YLsW06GXE_ENus4ad8AUNU4FEM74Z2vl" target="_blank" class="bg-white hover:bg-pinky-light/30 border border-brown/20 rounded-2xl p-2.5 shadow-polaroid flex flex-col items-center justify-center text-center transition-all hover:scale-105 active:scale-95 group">
 <div class="w-full aspect-square bg-cream rounded-xl border-2 border-dashed border-pinky-light flex items-center justify-center mb-2 p-2">
 <i data-lucide="piggy-bank" class="w-8 h-8 text-brown group-hover:text-brown-dark transition-colors stroke-[1.75]"></i>
 </div>
@@ -437,7 +438,7 @@ Open 10:00 a.m - Close 22:00 p.m
 </section>
 </main>
 <!-- Footer / Contact Us -->
-<footer class="bg-cream pt-10 pb-12 px-6 rounded-t-[40px] text-center mt-2 relative z-10 border-t-2 border-pinky-light shadow-[0_-10px_20px_-5px_rgba(166,85,115,0.2)]">
+<footer class="bg-cream pt-10 pb-12 px-6 rounded-t-[40px] text-center mt-2 relative z-10 border-t-2 border-pinky-light shadow-[0_-10px_20px_-5px_rgba(160,89,144,0.2)]">
 <h2 class="text-[15px] font-bold mb-6 mt-2 tracking-wider text-brown flex items-center justify-center gap-2 uppercase">
 CONTACT US <i data-lucide="heart" class="w-4 h-4 text-heart fill-heart"></i>
 </h2>
@@ -537,7 +538,7 @@ LINE
 </div>
 </div>
 <p class="text-[9.5px] text-brown-light text-center font-medium italic">
-หมายเหตุ : โน๊ตสลิปทุกครั้งก่อนโอนเงิน ลืมโน๊ตปรับ 5.-
+หมายเหตุ : โน็ดสลิปทุกครั้งก่อนโอนเงิน ลืมโน็ตปรับ 5.-
 </p>
 </div>
 </div>
@@ -549,128 +550,120 @@ LINE
 <script>
 lucide.createIcons();
 const portfolioData = {
-  fonts: {
-    title: "รายการฟอนต์",
-    icon: "type",
-    colorClass: "bg-pinky-light text-brown",
-    headerClass: "bg-pinky-light",
-    links: [
-      { name: "1. POTATO HOUSE", url: "https://drive.google.com/drive/folders/1bVNE63CDUJO57iwsgdLHo06T276PbdtY" },
-      { name: "2. BLY HOUSE", url: "https://drive.google.com/drive/folders/1uj7bV9UpOADSHJgnfWrPKhSqPsH1NiqG" },
-      { name: "3. IHO FONT", url: "https://drive.google.com/drive/folders/1d3w-fVgEAwjU8eUaTxW52RLQREZ0czVU" },
-      { name: "4. PKD HOUSE", url: "https://drive.google.com/drive/folders/15AxmnEWkjsXdgOt30Sr1-Y5IFnDTnDyE" },
-      { name: "5. KLD HOUSE", url: "https://drive.google.com/drive/folders/1LoGGsSx_zVj1ZqpCShlysONojls6mFPo" }
-    ]
-  }
+fonts: {
+title: "รายการฟอนด์",
+icon: "type",
+colorClass: "bg-pinky-light text-brown",
+headerClass: "bg-pinky-light",
+links: [
+{ name: "1. POTATO HOUSE", url: "https://drive.google.com/drive/folders/1bVNE63CDUJO57iwsgdLHo06T276PbdtY" },
+{ name: "2. BLY HOUSE", url: "https://drive.google.com/drive/folders/1uj7bV9UpOADSHJgnfWrPKhSqPsH1NiqG" },
+{ name: "3. IHO FONT", url: "https://drive.google.com/drive/folders/1d3w-fVgEAwjU8eUaTxW52RLQREZ0czVU" },
+{ name: "4. PKD HOUSE", url: "https://drive.google.com/drive/folders/15AxmnEWkjsXdgOt30Sr1-Y5IFnDTnDyE" },
+{ name: "5. KLD HOUSE", url: "https://drive.google.com/drive/folders/1LoGGsSx_zVj1ZqpCShlysONojls6mFPo" }
+]
+}
 };
 const portfolioModal = document.getElementById('portfolioModal');
 const paymentModal = document.getElementById('paymentModal');
 const modalTitle = document.getElementById('modalTitle');
 const modalLinksContainer = document.getElementById('modalLinks');
 const modalHeaderBg = document.getElementById('modalHeaderBg');
-
 function openModal(category) {
-  const data = portfolioData[category];
-  if (!data) return;
-  modalTitle.innerHTML = `<i data-lucide="${data.icon}" class="w-5 h-5 shrink-0"></i><span>${data.title}</span>`;
-  modalHeaderBg.className = `p-5 flex justify-between items-center ${data.headerClass}`;
-  modalLinksContainer.innerHTML = '';
-  data.links.forEach(link => {
-    const a = document.createElement('a');
-    a.href = link.url;
-    a.target = "_blank";
-    a.className = "flex items-center justify-between p-4 bg-white rounded-2xl shadow-sm border-2 border-transparent hover:border-pinky-light hover:shadow-md transition-all group";
-    a.innerHTML = `
-      <div class="flex items-center gap-3">
-        <div class="w-8 h-8 shrink-0 rounded-full flex items-center justify-center ${data.colorClass}">
-          <i data-lucide="link" class="w-4 h-4"></i>
-        </div>
-        <span class="font-medium text-brown group-hover:text-brown-dark transition-colors line-clamp-1">${link.name}</span>
-      </div>
-      <i data-lucide="external-link" class="w-4 h-4 text-brown opacity-50 shrink-0 group-hover:opacity-100 group-hover:scale-110 transition-all"></i>
-    `;
-    modalLinksContainer.appendChild(a);
-  });
-  lucide.createIcons();
-  portfolioModal.classList.remove('invisible', 'opacity-0');
-  portfolioModal.classList.add('active');
-  document.body.style.overflow = 'hidden';
-}
-
-function openPaymentModal() {
-  paymentModal.classList.remove('invisible', 'opacity-0');
-  paymentModal.classList.add('active');
-  document.body.style.overflow = 'hidden';
-}
-
-function closeModal(modalId) {
-  const targetModal = document.getElementById(modalId);
-  targetModal.classList.add('opacity-0');
-  targetModal.classList.remove('active');
-  setTimeout(() => {
-    targetModal.classList.add('invisible');
-    document.body.style.overflow = '';
-  }, 300);
-}
-
-[portfolioModal, paymentModal].forEach(m => {
-  m.addEventListener('click', function(e) {
-    if (e.target === m) closeModal(m.id);
-  });
+const data = portfolioData[category];
+if (!data) return;
+modalTitle.innerHTML = `<i data-lucide="${data.icon}" class="w-5 h-5 shrink-0"></i><span>${data.title}</span>`;
+modalHeaderBg.className = `p-5 flex justify-between items-center ${data.headerClass}`;
+modalLinksContainer.innerHTML = '';
+data.links.forEach(link => {
+const a = document.createElement('a');
+a.href = link.url;
+a.target = "_blank";
+a.className = "flex items-center justify-between p-4 bg-white rounded-2xl shadow-sm border-2 border-transparent hover:border-pinky-light hover:shadow-md transition-all group";
+a.innerHTML = `
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 shrink-0 rounded-full flex items-center justify-center ${data.colorClass}">
+<i data-lucide="link" class="w-4 h-4"></i>
+</div>
+<span class="font-medium text-brown group-hover:text-brown-dark transition-colors line-clamp-1">${link.name}</span>
+</div>
+<i data-lucide="external-link" class="w-4 h-4 text-brown opacity-50 shrink-0 group-hover:opacity-100 group-hover:scale-110 transition-all"></i>
+`;
+modalLinksContainer.appendChild(a);
 });
-
+lucide.createIcons();
+portfolioModal.classList.remove('invisible', 'opacity-0');
+portfolioModal.classList.add('active');
+document.body.style.overflow = 'hidden';
+}
+function openPaymentModal() {
+paymentModal.classList.remove('invisible', 'opacity-0');
+paymentModal.classList.add('active');
+document.body.style.overflow = 'hidden';
+}
+function closeModal(modalId) {
+const targetModal = document.getElementById(modalId);
+targetModal.classList.add('opacity-0');
+targetModal.classList.remove('active');
+setTimeout(() => {
+targetModal.classList.add('invisible');
+document.body.style.overflow = '';
+}, 300);
+}
+[portfolioModal, paymentModal].forEach(m => {
+m.addEventListener('click', function(e) {
+if (e.target === m) closeModal(m.id);
+});
+});
 /* ระบบ YouTube Music Player Integration */
 let player;
 let isPlaying = false;
 let noteInterval = null;
-
 function onYouTubeIframeAPIReady() {
-  player = new YT.Player('youtubePlayer', {
-    height: '0',
-    width: '0',
-    videoId: 'gnujuvJXalg',
-    playerVars: {
-      'autoplay': 0,
-      'controls': 0,
-      'loop': 1,
-      'playlist': 'gnujuvJXalg'
-    }
-  });
+player = new YT.Player('youtubePlayer', {
+height: '0',
+width: '0',
+videoId: 'gnujuvJXalg',
+playerVars: {
+'autoplay': 0,
+'controls': 0,
+'loop': 1,
+'playlist': 'gnujuvJXalg'
 }
-
+});
+}
 function createFloatingNote() {
-  const container = document.getElementById('notesContainer');
-  if (!container) return;
-  const note = document.createElement('span');
-  const symbols = ['♪', '♫', '♥', '★'];
-  note.innerText = symbols[Math.floor(Math.random() * symbols.length)];
-  note.className = 'music-note';
-  const randomX = (Math.random() * 20 - 10) + 'px';
-  note.style.left = `calc(50% + ${randomX})`;
-  note.style.top = '0px';
-  container.appendChild(note);
-  setTimeout(() => {
-    note.remove();
-  }, 2000);
+const container = document.getElementById('notesContainer');
+if (!container) return;
+const note = document.createElement('span');
+const symbols = ['♫', '♪', '♬', '♥'];
+note.innerText = symbols[Math.floor(Math.random() * symbols.length)];
+note.className = 'music-note';
+const randomX = (Math.random() * 40 - 20) + 'px';
+note.style.left = `calc(50% + ${randomX})`;
+note.style.top = '0px';
+container.appendChild(note);
+setTimeout(() => {
+note.remove();
+}, 2000);
 }
-
 function toggleMusic() {
-  const cleficon = document.getElementById('cleficon');
-  if (isPlaying) {
-    if (player && player.pauseVideo) {
-      player.pauseVideo();
-    }
-    cleficon.classList.remove('animate-clef-playing');
-    clearInterval(noteInterval);
-  } else {
-    if (player && player.playVideo) {
-      player.playVideo();
-    }
-    cleficon.classList.add('animate-clef-playing');
-    createFloatingNote();
-    noteInterval = setInterval(createFloatingNote, 600);
-  }
-  isPlaying = !isPlaying;
+const cleficon = document.getElementById('cleficon');
+if (isPlaying) {
+if (player && player.pauseVideo) {
+player.pauseVideo();
+}
+cleficon.classList.remove('animate-clef-playing');
+clearInterval(noteInterval);
+} else {
+if (player && player.playVideo) {
+player.playVideo();
+}
+cleficon.classList.add('animate-clef-playing');
+createFloatingNote();
+noteInterval = setInterval(createFloatingNote, 600);
+}
+isPlaying = !isPlaying;
 }
 </script>
 </body>
