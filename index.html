@@ -4,6 +4,19 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Miori Shop</title>
+
+<!-- Open Graph / Facebook / LINE Meta Tags (สำหรับรูปพรีวิวแชร์ลิงก์) -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Miori Shop - รับออกแบบป้ายต่างๆ">
+<meta property="og:description" content="รับออกแบบป้ายต่างๆ เริ่มต้น 59.- ไม่จำกัดข้อมูลการใส่ ทางเราออกแบบการจัดวางให้ค่า">
+<meta property="og:image" content="ไม่มีชื่อ 81_20260925210212.png">
+
+<!-- Twitter Meta Tags -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Miori Shop - รับออกแบบป้ายต่างๆ">
+<meta name="twitter:description" content="รับออกแบบป้ายต่างๆ เริ่มต้น 59.- ไม่จำกัดข้อมูลการใส่ ทางเราออกแบบการจัดวางให้ค่า">
+<meta name="twitter:image" content="ไม่มีชื่อ 81_20260925210212.png">
+
 <!-- Google Fonts: Mitr -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -126,14 +139,14 @@ body {
 </head>
 <body class="antialiased selection:bg-pinky selection:text-white relative">
 
-<!-- ซ่อน YouTube Player สำหรับเล่นเพลง ayumi hamasaki - Who... "Across the Universe" -->
+<!-- YouTube Player สำหรับเล่นเพลง -->
 <div class="hidden">
   <div id="youtubePlayer"></div>
 </div>
 
-<!-- ปุ่มเปิดเพลง -->
+<!-- ปุ่มเปิด/ปิดเพลง มุมล่างซ้าย -->
 <div class="fixed bottom-4 left-4 z-50">
-  <button id="musicToggle" onclick="toggleMusic()" class="w-12 h-12 bg-white rounded-full p-1 shadow-md border-2 border-[#A05990] flex items-center justify-center hover:scale-110 active:scale-95 transition-all group relative">
+  <button id="musicToggle" onclick="toggleMusic()" class="w-12 h-12 bg-white rounded-full p-1 shadow-md border-2 border-[#FFC2E2] flex items-center justify-center hover:scale-110 active:scale-95 transition-all group relative">
     <div class="w-full h-full rounded-full border-2 border-[#FFE6F2] bg-[#FFF0F7] flex items-center justify-center">
       <div id="clefIcon" class="flex items-center justify-center text-[#A05990] transition-transform">
         <i data-lucide="music" class="w-5 h-5 stroke-[2.5]"></i>
@@ -166,7 +179,7 @@ body {
     <circle cx="60" cy="40" r="5.5" fill="#FFFFFF" />
     <circle cx="40" cy="60" r="5.5" fill="#FFFFFF" />
     <circle cx="60" cy="60" r="5.5" fill="#FFFFFF" />
-    <path d="M38 39 L62 63 M62 39 L38 63" stroke="#A05990" stroke-width="8" stroke-linecap="round"/>
+    <path d="M38 39 L62 63 M62 39 L38 63" stroke="#FFC2E2" stroke-width="8" stroke-linecap="round"/>
     <path d="M38 38 L62 62 M62 38 L38 62" stroke="#FFFFFF" stroke-width="8" stroke-linecap="round"/>
   </symbol>
   <symbol id="icon-heart-cute" viewBox="0 0 24 24" fill="#FFADD6">
@@ -200,7 +213,7 @@ body {
       <div class="w-24 h-24 rounded-2xl border-[4px] border-white shadow-md overflow-hidden bg-white flex items-center justify-center relative z-10">
         <img src="ไม่มีชื่อ 81_20260925210212.png" alt="Miori Shop Logo" class="w-full h-full object-cover" onerror="this.onerror=null; this.src='https://placehold.co/150x150/FFE6F2/A05990?text=Miori';">
       </div>
-      <div class="absolute -bottom-2 -right-2 w-8 h-8 bg-white rounded-full flex items-center justify-center shadow-sm border-2 border-pinky-light group-hover:rotate-12 transition-transform z-20">
+      <div class="absolute -bottom-2 -right-2 w-8 h-8 bg-white rounded-full flex items-center justify-center shadow-sm border-2 border-[#FFC2E2] group-hover:rotate-12 transition-transform z-20">
         <i data-lucide="heart" class="w-4 h-4 text-heart fill-heart"></i>
       </div>
     </div>
@@ -210,7 +223,7 @@ body {
         <i data-lucide="sparkles" class="w-4 h-4 text-brown" stroke-width="1.5"></i>
       </div>
       <h1 class="text-[34px] leading-tight font-bold text-brown mb-2 relative">Miori Shop</h1>
-      <p class="text-brown-light text-[11px] leading-relaxed font-medium tracking-wide bg-white inline-block px-3 py-1.5 rounded-2xl shadow-sm border border-pinky-light">
+      <p class="text-brown-light text-[11px] leading-relaxed font-medium tracking-wide bg-white inline-block px-3 py-1.5 rounded-2xl shadow-sm border border-[#FFC2E2]">
         Open 10:00 a.m - Close 22:00 p.m
       </p>
     </div>
@@ -232,9 +245,9 @@ body {
       </p>
       <!-- Badges -->
       <div class="flex flex-wrap justify-center gap-2 mt-3">
-        <span class="text-xs bg-white border border-pinky/60 text-brown px-3 py-1 rounded-full shadow-sm hover:scale-105 transition-transform cursor-pointer font-medium">รับทำลายน้ำ</span>
-        <span class="text-xs bg-white border border-pinky/60 text-brown px-3 py-1 rounded-full shadow-sm hover:scale-105 transition-transform cursor-pointer font-medium">รับทำป้าย</span>
-        <span class="text-xs bg-white border border-pinky/60 text-brown px-3 py-1 rounded-full shadow-sm hover:scale-105 transition-transform cursor-pointer font-medium">รับดึงเข้ากลุ่ม</span>
+        <span class="text-xs bg-white border border-[#FFC2E2] text-brown px-3 py-1 rounded-full shadow-sm hover:scale-105 transition-transform cursor-pointer font-medium">รับทำลายน้ำ</span>
+        <span class="text-xs bg-white border border-[#FFC2E2] text-brown px-3 py-1 rounded-full shadow-sm hover:scale-105 transition-transform cursor-pointer font-medium">รับทำป้าย</span>
+        <span class="text-xs bg-white border border-[#FFC2E2] text-brown px-3 py-1 rounded-full shadow-sm hover:scale-105 transition-transform cursor-pointer font-medium">รับดึงเข้ากลุ่ม</span>
       </div>
     </section>
 
@@ -249,48 +262,48 @@ body {
       
       <div class="grid grid-cols-3 gap-3 relative z-10">
         <!-- 1. ป้ายแนวน่ารัก -->
-        <a href="https://drive.google.com/drive/folders/1UTDDPZxwmZ9Bxld-wkRuboXRBQwRbe7g" target="_blank" class="aspect-square bg-white hover:bg-pinky-light border-2 border-pinky-light rounded-2xl p-2 flex flex-col items-center justify-center shadow-sm group transition-all hover:scale-105">
-          <div class="w-9 h-9 rounded-xl bg-cream border border-pinky-light flex items-center justify-center mb-1">
+        <a href="https://drive.google.com/drive/folders/1UTDDPZxwmZ9Bxld-wkRuboXRBQwRbe7g" target="_blank" class="aspect-square bg-white hover:bg-pinky-light border-2 border-[#FFC2E2] rounded-2xl p-2 flex flex-col items-center justify-center shadow-sm group transition-all hover:scale-105">
+          <div class="w-9 h-9 rounded-xl bg-cream border border-[#FFC2E2] flex items-center justify-center mb-1">
             <i data-lucide="heart" class="w-5 h-5 text-heart fill-heart"></i>
           </div>
           <span class="font-medium text-xs text-brown group-hover:text-brown-dark text-center leading-tight">ป้ายแนวน่ารัก</span>
         </a>
 
         <!-- 2. ป้ายแนวสว่าง -->
-        <a href="https://drive.google.com/drive/folders/1Of_4oKv6n32tAccEwbe09IyeKAAIdcAk" target="_blank" class="aspect-square bg-white hover:bg-pinky-light border-2 border-pinky-light rounded-2xl p-2 flex flex-col items-center justify-center shadow-sm group transition-all hover:scale-105">
-          <div class="w-9 h-9 rounded-xl bg-pinky-light flex items-center justify-center mb-1">
+        <a href="https://drive.google.com/drive/folders/1Of_4oKv6n32tAccEwbe09IyeKAAIdcAk" target="_blank" class="aspect-square bg-white hover:bg-pinky-light border-2 border-[#FFC2E2] rounded-2xl p-2 flex flex-col items-center justify-center shadow-sm group transition-all hover:scale-105">
+          <div class="w-9 h-9 rounded-xl bg-pinky-light border border-[#FFC2E2] flex items-center justify-center mb-1">
             <i data-lucide="sun" class="w-5 h-5 text-brown"></i>
           </div>
           <span class="font-medium text-xs text-brown group-hover:text-brown-dark text-center leading-tight">ป้ายแนวสว่าง</span>
         </a>
 
         <!-- 3. ป้ายแนวมืด -->
-        <a href="https://drive.google.com/drive/folders/1Bg8M3w0HpGnXAGAb8At4PkxMNawNCzJg" target="_blank" class="aspect-square bg-white hover:bg-pinky-light border-2 border-pinky-light rounded-2xl p-2 flex flex-col items-center justify-center shadow-sm group transition-all hover:scale-105">
-          <div class="w-9 h-9 rounded-xl bg-pinky-light flex items-center justify-center mb-1">
+        <a href="https://drive.google.com/drive/folders/1Bg8M3w0HpGnXAGAb8At4PkxMNawNCzJg" target="_blank" class="aspect-square bg-white hover:bg-pinky-light border-2 border-[#FFC2E2] rounded-2xl p-2 flex flex-col items-center justify-center shadow-sm group transition-all hover:scale-105">
+          <div class="w-9 h-9 rounded-xl bg-pinky-light border border-[#FFC2E2] flex items-center justify-center mb-1">
             <i data-lucide="moon" class="w-5 h-5 text-brown"></i>
           </div>
           <span class="font-medium text-xs text-brown group-hover:text-brown-dark text-center leading-tight">ป้ายแนวมืด</span>
         </a>
 
         <!-- 4. ป้ายเรทราคา -->
-        <a href="https://drive.google.com/drive/folders/1AWD8J5JtZBSlQsgMHzVazxVKgum0810C" target="_blank" class="aspect-square bg-white hover:bg-pinky-light border-2 border-pinky-light rounded-2xl p-2 flex flex-col items-center justify-center shadow-sm group transition-all hover:scale-105">
-          <div class="w-9 h-9 rounded-xl bg-cream border border-pinky-light flex items-center justify-center mb-1">
+        <a href="https://drive.google.com/drive/folders/1AWD8J5JtZBSlQsgMHzVazxVKgum0810C" target="_blank" class="aspect-square bg-white hover:bg-pinky-light border-2 border-[#FFC2E2] rounded-2xl p-2 flex flex-col items-center justify-center shadow-sm group transition-all hover:scale-105">
+          <div class="w-9 h-9 rounded-xl bg-cream border border-[#FFC2E2] flex items-center justify-center mb-1">
             <i data-lucide="tag" class="w-5 h-5 text-brown"></i>
           </div>
           <span class="font-medium text-xs text-brown group-hover:text-brown-dark text-center leading-tight">ป้ายเรทราคา</span>
         </a>
 
         <!-- 5. ลายน้ำ -->
-        <a href="https://drive.google.com/drive/folders/1qTde2_bAUL_qgsYfFlTgKC8TbHwmgtQe" target="_blank" class="aspect-square bg-white hover:bg-pinky-light border-2 border-pinky-light rounded-2xl p-2 flex flex-col items-center justify-center shadow-sm group transition-all hover:scale-105">
-          <div class="w-9 h-9 rounded-xl bg-pinky-light flex items-center justify-center mb-1">
+        <a href="https://drive.google.com/drive/folders/1qTde2_bAUL_qgsYfFlTgKC8TbHwmgtQe" target="_blank" class="aspect-square bg-white hover:bg-pinky-light border-2 border-[#FFC2E2] rounded-2xl p-2 flex flex-col items-center justify-center shadow-sm group transition-all hover:scale-105">
+          <div class="w-9 h-9 rounded-xl bg-pinky-light border border-[#FFC2E2] flex items-center justify-center mb-1">
             <i data-lucide="droplets" class="w-5 h-5 text-brown"></i>
           </div>
           <span class="font-medium text-xs text-brown group-hover:text-brown-dark text-center leading-tight">ลายน้ำ</span>
         </a>
 
         <!-- 6. ฟอนต์ -->
-        <button onclick="openModal('fonts')" class="aspect-square bg-white hover:bg-pinky-light border-2 border-pinky-light rounded-2xl p-2 flex flex-col items-center justify-center shadow-sm group transition-all hover:scale-105">
-          <div class="w-9 h-9 rounded-xl bg-pinky-light flex items-center justify-center mb-1">
+        <button onclick="openModal('fonts')" class="aspect-square bg-white hover:bg-pinky-light border-2 border-[#FFC2E2] rounded-2xl p-2 flex flex-col items-center justify-center shadow-sm group transition-all hover:scale-105">
+          <div class="w-9 h-9 rounded-xl bg-pinky-light border border-[#FFC2E2] flex items-center justify-center mb-1">
             <i data-lucide="type" class="w-5 h-5 text-brown"></i>
           </div>
           <span class="font-medium text-xs text-brown group-hover:text-brown-dark text-center leading-tight">ฟอนต์</span>
@@ -300,14 +313,14 @@ body {
 
     <!-- รูปแบรนเนอร์ -->
     <section class="w-full">
-      <div class="rounded-3xl overflow-hidden border-2 border-pinky-light shadow-card bg-white">
+      <div class="rounded-3xl overflow-hidden border-2 border-[#FFC2E2] shadow-card bg-white">
         <img src="ไม่มีชื่อ 80_20260925012941.png" alt="Banner" class="w-full h-auto object-cover hover:scale-105 transition-transform duration-500" onerror="this.onerror=null; this.src='https://placehold.co/2400x800/FFE6F2/A05990?text=Banner+2400x800';">
       </div>
     </section>
 
-    <!-- ปุ่มเช็คคิวงานข้างล่างแบรนเนอร์ -->
+    <!-- Status Bar & ปุ่มเช็คคิวงาน -->
     <section class="space-y-3">
-      <div class="hidden bg-white border-2 border-pinky-light rounded-2xl p-4 shadow-sm items-center justify-between">
+      <div class="hidden bg-white border-2 border-[#FFC2E2] rounded-2xl p-4 shadow-sm items-center justify-between">
         <div class="flex items-center gap-2">
           <span class="relative flex h-3 w-3">
             <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-pinky opacity-75"></span>
@@ -318,7 +331,7 @@ body {
         <span class="text-[10px] bg-pinky-light text-brown px-2 py-0.5 rounded-full font-medium">ว่าง 3 คิว</span>
       </div>
 
-      <a href="https://docs.google.com/spreadsheets/d/1-FdSIRlWdqaiypReK_ER95wd8PWxHJHZpHq2tXZRt6Q/edit?usp=drivesdk" target="_blank" class="w-full py-3 px-4 rounded-2xl border-2 border-dashed border-brown/70 bg-cream hover:bg-pinky-light/50 transition-colors flex items-center justify-center gap-2 text-brown font-medium text-sm shadow-sm group">
+      <a href="https://docs.google.com/spreadsheets/d/1-FdSIRlWdqaiypReK_ER95wd8PWxHJHZpHq2tXZRt6Q/edit?usp=drivesdk" target="_blank" class="w-full py-3 px-4 rounded-2xl border-2 border-dashed border-[#FFC2E2] bg-cream hover:bg-pinky-light/50 transition-colors flex items-center justify-center gap-2 text-brown font-medium text-sm shadow-sm group">
         <i data-lucide="calendar-check" class="w-5 h-5 text-brown group-hover:scale-110 transition-transform"></i>
         <span>เช็คคิวงานตรงนี้</span>
       </a>
@@ -326,15 +339,15 @@ body {
 
     <!-- Pricing Web Design -->
     <section class="relative">
-      <h2 class="text-xl font-medium mb-4 flex items-center gap-2 border-b-2 border-pinky-light pb-2 text-brown">
+      <h2 class="text-xl font-medium mb-4 flex items-center gap-2 border-b-2 border-[#FFC2E2] pb-2 text-brown">
         <i data-lucide="receipt" class="w-5 h-5 text-brown"></i>
         ราคาทำป้ายเริ่มต้น
       </h2>
-      <div class="bg-white rounded-3xl shadow-card p-6 space-y-4 border-2 border-pinky-light relative">
+      <div class="bg-white rounded-3xl shadow-card p-6 space-y-4 border-2 border-[#FFC2E2] relative">
         <svg class="absolute top-4 right-4 w-8 h-8 -rotate-12 drop-shadow-sm" viewBox="0 0 100 100"><use href="#icon-button"></use></svg>
         <svg class="absolute top-1/2 -left-3 w-8 h-8 bg-white rounded-full drop-shadow-sm p-1" viewBox="0 0 24 24"><use href="#icon-heart-cute"></use></svg>
         
-        <div class="flex items-end justify-between border-b border-dashed border-pinky/60 pb-3 relative z-10">
+        <div class="flex items-end justify-between border-b border-dashed border-[#FFC2E2] pb-3 relative z-10">
           <div>
             <span class="block font-medium text-xl text-brown">Start</span>
             <span class="text-[11px] text-brown-light">ลายน้ำน่ารักๆ ไว้ใส่ในตัวอย่างสินค้าเท่านั้น</span>
@@ -344,13 +357,13 @@ body {
 
         <p class="font-medium text-xs text-brown pt-1 relative z-10">เรทราคาต่างๆ</p>
         <ul class="space-y-2.5 text-xs relative z-10">
-          <li class="flex justify-between items-center bg-cream p-2.5 rounded-lg"><span class="text-brown">ป้ายแนวน่ารัก</span> <span class="font-medium text-brown">เริ่มต้น 59.-</span></li>
-          <li class="flex justify-between items-center bg-cream p-2.5 rounded-lg"><span class="text-brown">ป้ายแนวสว่าง</span> <span class="font-medium text-brown">เริ่มต้น 89.-</span></li>
-          <li class="flex justify-between items-center bg-cream p-2.5 rounded-lg"><span class="text-brown">ป้ายแนวมืด</span> <span class="font-medium text-brown">เริ่มต้น 89.-</span></li>
-          <li class="flex justify-between items-center bg-cream p-2.5 rounded-lg"><span class="text-brown">ป้ายเรทราคา</span> <span class="font-medium text-brown">เริ่มต้น 99.-</span></li>
+          <li class="flex justify-between items-center bg-cream border border-[#FFC2E2]/60 p-2.5 rounded-lg"><span class="text-brown">ป้ายแนวน่ารัก</span> <span class="font-medium text-brown">เริ่มต้น 59.-</span></li>
+          <li class="flex justify-between items-center bg-cream border border-[#FFC2E2]/60 p-2.5 rounded-lg"><span class="text-brown">ป้ายแนวสว่าง</span> <span class="font-medium text-brown">เริ่มต้น 89.-</span></li>
+          <li class="flex justify-between items-center bg-cream border border-[#FFC2E2]/60 p-2.5 rounded-lg"><span class="text-brown">ป้ายแนวมืด</span> <span class="font-medium text-brown">เริ่มต้น 89.-</span></li>
+          <li class="flex justify-between items-center bg-cream border border-[#FFC2E2]/60 p-2.5 rounded-lg"><span class="text-brown">ป้ายเรทราคา</span> <span class="font-medium text-brown">เริ่มต้น 99.-</span></li>
         </ul>
 
-        <div class="bg-pinky-light/40 rounded-xl p-3 text-xs border border-pinky-light relative z-10">
+        <div class="bg-pinky-light/40 rounded-xl p-3 text-xs border border-[#FFC2E2] relative z-10">
           <p class="font-medium mb-1 flex items-center gap-1 text-brown"><i data-lucide="plus-circle" class="w-4 h-4 text-brown"></i> Add on เพิ่มเติม</p>
           <p class="text-brown-light ml-1 font-medium">มีราคาเหมา 3 ป้ายขึ้นไป</p>
         </div>
@@ -370,9 +383,37 @@ body {
           </div>
         </div>
 
-        <p class="text-[10px] text-brown-light italic pt-1 relative z-10 border-t border-pinky-light/60">
+        <p class="text-[10px] text-brown-light italic pt-1 relative z-10 border-t border-[#FFC2E2]">
           หมายเหตุ: ราคาขึ้นอยู่กับความละเอียดของข้อมูลและปริมาณเนื้อหา ทางร้านขอสงวนสิทธิ์ในการประเมินราคาตามความเหมาะสมนะคะ
         </p>
+      </div>
+
+      <div class="hidden bg-gradient-to-b from-white to-pinky-light/30 rounded-3xl shadow-card p-6 space-y-4 border-2 border-[#FFC2E2] relative overflow-hidden mt-5">
+        <div class="absolute top-0 right-0 bg-pinky-dark text-white text-[10px] px-3 py-1 rounded-bl-xl font-medium shadow-sm z-20">สุดคุ้ม!</div>
+        <div class="flex items-end justify-between border-b border-dashed border-[#FFC2E2] pb-3 relative z-10">
+          <div class="pr-2">
+            <span class="block font-medium text-lg text-pinky-dark leading-tight">เซ็ต 3 เว็บสุดคุ้ม<br><span class="text-sm">(พกป้ายมาเอง 1 ป้าย)</span></span>
+          </div>
+          <span class="text-2xl font-semibold text-brown">359.-</span>
+        </div>
+        <ul class="space-y-3 text-sm relative z-10 text-brown">
+          <li class="flex items-start gap-2">
+            <i data-lucide="check-circle-2" class="w-4 h-4 text-pinky-dark shrink-0 mt-0.5"></i>
+            <span class="leading-tight"><b>เว็บที่ 1:</b> พอร์ตโฟลิโอแนะนำตัว<br><span class="text-xs text-brown-light">+ ลงของขาย (ป้ายที่พกมา)</span></span>
+          </li>
+          <li class="flex items-start gap-2">
+            <i data-lucide="check-circle-2" class="w-4 h-4 text-pinky-dark shrink-0 mt-0.5"></i>
+            <span class="leading-tight"><b>เว็บที่ 2:</b> ป้ายบัญชี<br><span class="text-xs text-brown-light">มีปุ่มให้กดคัดลอกเลขบัญชีได้</span></span>
+          </li>
+          <li class="flex items-start gap-2">
+            <i data-lucide="check-circle-2" class="w-4 h-4 text-pinky-dark shrink-0 mt-0.5"></i>
+            <span class="leading-tight"><b>เว็บที่ 3:</b> เลือกเองได้ 1 เว็บ<br><span class="text-xs text-brown-light">(เลือกจากเทมเพลตที่มีเท่านั้น)</span></span>
+          </li>
+        </ul>
+        <div class="bg-white rounded-xl p-3 text-xs text-center border border-[#FFC2E2] relative z-10">
+          <span class="text-brown-light block mb-1">* เว็บในเซ็ตจะทํา <span class="text-pinky-dark font-medium">โทนสีเดียวกับป้ายที่พกมา</span> เท่านั้น</span>
+          <span class="text-pinky-dark font-medium block">ตกลิงก์ละ 100 นิดๆ คุ้มมากก</span>
+        </div>
       </div>
     </section>
 
@@ -380,7 +421,7 @@ body {
     <section class="space-y-2">
       <div class="grid grid-cols-2 gap-3.5">
         <!-- กรอบซ้าย: ขั้นตอน -->
-        <div class="bg-white rounded-2xl p-4 shadow-sm border-2 border-pinky-light relative overflow-hidden flex flex-col justify-between">
+        <div class="bg-white rounded-2xl p-4 shadow-sm border-2 border-[#FFC2E2] relative overflow-hidden flex flex-col justify-between">
           <svg class="absolute -right-3 -bottom-3 w-10 h-10 opacity-30 pointer-events-none" viewBox="0 0 100 100"><use href="#icon-button"></use></svg>
           <div>
             <h3 class="font-medium mb-3 flex items-center gap-1.5 text-sm text-brown relative z-10">
@@ -397,7 +438,7 @@ body {
         </div>
 
         <!-- กรอบขวา: กฎของร้าน -->
-        <div class="bg-white rounded-2xl p-4 shadow-sm border-2 border-pinky-light relative overflow-hidden flex flex-col justify-between">
+        <div class="bg-white rounded-2xl p-4 shadow-sm border-2 border-[#FFC2E2] relative overflow-hidden flex flex-col justify-between">
           <svg class="absolute -right-2 -bottom-2 w-8 h-8 opacity-80 pointer-events-none" viewBox="0 0 24 24"><use href="#icon-heart-cute"></use></svg>
           <div>
             <h3 class="font-medium mb-3 flex items-center gap-1.5 text-sm text-brown relative z-10">
@@ -422,9 +463,9 @@ body {
 
     <!-- ปุ่มช่องทางการโอนเงิน -->
     <section>
-      <button onclick="openPaymentModal()" class="w-full bg-white hover:bg-pinky-light/50 border-2 border-brown/70 text-brown py-3.5 px-5 rounded-2xl font-medium text-sm shadow-card flex items-center justify-between transition-all hover:scale-[1.02]">
+      <button onclick="openPaymentModal()" class="w-full bg-white hover:bg-pinky-light/50 border-2 border-[#FFC2E2] text-brown py-3.5 px-5 rounded-2xl font-medium text-sm shadow-card flex items-center justify-between transition-all hover:scale-[1.02]">
         <div class="flex items-center gap-3">
-          <div class="w-9 h-9 rounded-xl bg-pinky-light flex items-center justify-center">
+          <div class="w-9 h-9 rounded-xl bg-pinky-light border border-[#FFC2E2] flex items-center justify-center">
             <i data-lucide="qr-code" class="w-5 h-5 text-brown"></i>
           </div>
           <span class="text-brown font-medium">ช่องทางการโอนเงิน</span>
@@ -434,7 +475,7 @@ body {
     </section>
 
     <!-- Work parts -->
-    <section class="bg-white rounded-3xl p-5 border-2 border-solid border-pinky/60 shadow-sm text-center">
+    <section class="bg-white rounded-3xl p-5 border-2 border-solid border-[#FFC2E2] shadow-sm text-center">
       <h3 class="font-medium text-brown text-sm flex items-center justify-center gap-1.5">
         <i data-lucide="sparkles" class="w-4 h-4 text-brown"></i> Work parts
       </h3>
@@ -442,24 +483,24 @@ body {
 
       <div class="grid grid-cols-3 gap-3">
         <!-- โพลารอยด์ 1 -->
-        <a href="https://drive.google.com/drive/folders/10wVjpHKCr8rMZ-UoCd5G_ALc13AUC1Qk" target="_blank" class="bg-white hover:bg-pinky-light/30 border border-brown/20 rounded-2xl p-2.5 shadow-polaroid flex flex-col items-center justify-center text-center transition-all hover:scale-105 active:scale-95 group">
-          <div class="w-full aspect-square bg-cream rounded-xl border-2 border-dashed border-pinky-light flex items-center justify-center mb-2 p-2">
+        <a href="https://drive.google.com/drive/folders/10wVjpHKCr8rMZ-UoCd5G_ALc13AUC1Qk" target="_blank" class="bg-white hover:bg-pinky-light/30 border border-[#FFC2E2] rounded-2xl p-2.5 shadow-polaroid flex flex-col items-center justify-center text-center transition-all hover:scale-105 active:scale-95 group">
+          <div class="w-full aspect-square bg-cream rounded-xl border-2 border-dashed border-[#FFC2E2] flex items-center justify-center mb-2 p-2">
             <i data-lucide="dog" class="w-8 h-8 text-brown group-hover:text-brown-dark transition-colors stroke-[1.75]"></i>
           </div>
           <span class="text-[10px] font-medium text-brown group-hover:text-brown-dark transition-colors leading-tight">˚₊‧꒰ა 𝘽𝙡𝙤𝙘𝙠 ໒꒱ ‧₊˚</span>
         </a>
 
         <!-- โพลารอยด์ 2 -->
-        <a href="https://drive.google.com/drive/folders/1T36yZKLHN5huKfwu1NYW_PVLLsswHTiD" target="_blank" class="bg-white hover:bg-pinky-light/30 border border-brown/20 rounded-2xl p-2.5 shadow-polaroid flex flex-col items-center justify-center text-center transition-all hover:scale-105 active:scale-95 group">
-          <div class="w-full aspect-square bg-cream rounded-xl border-2 border-dashed border-pinky-light flex items-center justify-center mb-2 p-2">
+        <a href="https://drive.google.com/drive/folders/1T36yZKLHN5huKfwu1NYW_PVLLsswHTiD" target="_blank" class="bg-white hover:bg-pinky-light/30 border border-[#FFC2E2] rounded-2xl p-2.5 shadow-polaroid flex flex-col items-center justify-center text-center transition-all hover:scale-105 active:scale-95 group">
+          <div class="w-full aspect-square bg-cream rounded-xl border-2 border-dashed border-[#FFC2E2] flex items-center justify-center mb-2 p-2">
             <i data-lucide="cat" class="w-8 h-8 text-brown group-hover:text-brown-dark transition-colors stroke-[1.75]"></i>
           </div>
           <span class="text-[10px] font-medium text-brown group-hover:text-brown-dark transition-colors leading-tight">˚₊‧꒰ა 𝙏𝙤𝙤𝙣 ໒꒱ ‧₊˚</span>
         </a>
 
         <!-- โพลารอยด์ 3 -->
-        <a href="https://drive.google.com/drive/folders/1YLsW06GXE_ENus4ad8AUNU4FEM74Z2vl" target="_blank" class="bg-white hover:bg-pinky-light/30 border border-brown/20 rounded-2xl p-2.5 shadow-polaroid flex flex-col items-center justify-center text-center transition-all hover:scale-105 active:scale-95 group">
-          <div class="w-full aspect-square bg-cream rounded-xl border-2 border-dashed border-pinky-light flex items-center justify-center mb-2 p-2">
+        <a href="https://drive.google.com/drive/folders/1YLsW06GXE_ENus4ad8AUNU4FEM74Z2vl" target="_blank" class="bg-white hover:bg-pinky-light/30 border border-[#FFC2E2] rounded-2xl p-2.5 shadow-polaroid flex flex-col items-center justify-center text-center transition-all hover:scale-105 active:scale-95 group">
+          <div class="w-full aspect-square bg-cream rounded-xl border-2 border-dashed border-[#FFC2E2] flex items-center justify-center mb-2 p-2">
             <i data-lucide="piggy-bank" class="w-8 h-8 text-brown group-hover:text-brown-dark transition-colors stroke-[1.75]"></i>
           </div>
           <span class="text-[10px] font-medium text-brown group-hover:text-brown-dark transition-colors leading-tight">˚₊‧꒰ა 𝘿𝙚𝙨𝙘𝙤 ໒꒱ ‧₊˚</span>
@@ -467,10 +508,90 @@ body {
       </div>
     </section>
 
+    <!-- Web Course Section (คงไว้ครบถ้วน) -->
+    <section class="hidden bg-white rounded-3xl p-6 text-center relative shadow-card border-2 border-[#FFC2E2]">
+      <svg class="absolute -left-3 -top-3 w-10 h-10 text-brown opacity-30 -rotate-12 z-20" viewBox="0 0 24 24"><use href="#icon-teddy"></use></svg>
+      <svg class="absolute right-4 bottom-4 w-10 h-10 rotate-45 opacity-30" viewBox="0 0 100 100"><use href="#icon-button"></use></svg>
+      <h2 class="text-xl font-medium mb-2 flex items-center justify-center gap-2 relative z-10 text-brown">
+        <i data-lucide="laptop" class="w-5 h-5 shrink-0 text-brown"></i>
+        คอร์สสอนทำเว็บสไตล์ทิ้งจู
+      </h2>
+      <p class="text-sm text-brown-light mb-4 relative z-10">สอนตั้งแต่ 0 จนทำเป็นเว็บใช้งานได้จริง<br>มีเทมเพลตให้กว่า 5 แบบ แทบจะจับมือสอน</p>
+      <div class="inline-block bg-pinky-light/50 border border-[#FFC2E2] text-brown font-semibold px-5 py-1.5 rounded-full text-sm mb-5 shadow-sm relative z-10">
+        ราคาพิเศษ 299.- <span class="line-through text-brown-light text-xs ml-1 font-normal">399.-</span>
+      </div>
+      <div class="flex flex-col gap-2 relative z-10">
+        <a href="https://drive.google.com/drive/folders/1fj024BhkgC1ctJeiwyZUG3USteSdzWzr" target="_blank" class="bg-brown text-white text-xs py-2.5 px-4 rounded-xl hover:bg-brown-dark transition flex items-center justify-center gap-2 shadow-sm">
+          <i data-lucide="folder-open" class="w-4 h-4 shrink-0"></i> ดูรายละเอียดคอร์ส
+        </a>
+        <a href="https://purple-wind-aced.cozyw75.workers.dev/" target="_blank" class="bg-cream border border-[#FFC2E2] text-brown text-xs py-2.5 px-4 rounded-xl hover:bg-pinky-light/50 transition flex items-center justify-center gap-2 shadow-sm">
+          <i data-lucide="book-open" class="w-4 h-4 text-brown shrink-0"></i> อ่านกฎก่อนเข้าคอร์ส
+        </a>
+      </div>
+    </section>
+
+    <!-- Goodnotes Section (คงไว้ครบถ้วน) -->
+    <section class="hidden relative">
+      <h2 class="text-xl font-medium mb-5 flex items-center gap-2 border-b-2 border-[#FFC2E2] pb-2 mt-8 text-brown">
+        <i data-lucide="pen-tool" class="w-5 h-5 text-pinky-dark"></i>
+        แอปพลิเคชัน Goodnotes
+      </h2>
+      <div class="space-y-5">
+        <div class="bg-white border-2 border-[#FFC2E2] rounded-2xl p-5 shadow-sm relative overflow-hidden">
+          <svg class="absolute -right-3 -top-3 w-10 h-10 rotate-12 drop-shadow-sm opacity-80" viewBox="0 0 100 100"><use href="#icon-button"></use></svg>
+          <div class="absolute top-0 right-4 bg-pinky text-white text-[10px] px-3 py-1 rounded-b-lg font-medium shadow-sm z-10">ถาวร (iOS)</div>
+          <h3 class="font-medium text-lg text-brown mb-2 mt-1 relative z-10">รุ่นพิเศษ</h3>
+          <ul class="text-xs text-brown-light space-y-1.5 mb-4 list-disc list-inside relative z-10">
+            <li>สมุดโน้ต ไวท์บอร์ด เอกสาร ไม่จํากัด</li>
+            <li>แชร์ลิงก์สาธารณะได้</li>
+            <li>ถอดเสียงไม่จํากัด</li>
+          </ul>
+          <div class="flex flex-wrap gap-2 text-sm font-medium relative z-10">
+            <span class="bg-cream border border-[#FFC2E2] px-3 py-1 rounded-lg text-brown">เมลรวม 20.-</span>
+            <span class="bg-cream border border-[#FFC2E2] px-3 py-1 rounded-lg text-brown">หาร 5 คน 149.-</span>
+            <span class="bg-pinky text-white px-3 py-1 rounded-lg shadow-sm">ส่วนตัว 490.-</span>
+          </div>
+        </div>
+
+        <div class="bg-white border-2 border-[#FFC2E2] rounded-2xl p-5 shadow-sm relative overflow-hidden">
+          <svg class="absolute -left-3 -bottom-3 w-10 h-10 -rotate-12 drop-shadow-sm opacity-80" viewBox="0 0 100 100"><use href="#icon-button"></use></svg>
+          <div class="absolute top-0 right-4 bg-[#BFA094] text-white text-[10px] px-3 py-1 rounded-b-lg font-medium shadow-sm z-10">รายปี (ทุกระบบ)</div>
+          <h3 class="font-medium text-lg text-brown mb-2 mt-1">Essential</h3>
+          <ul class="text-xs text-brown-light space-y-1.5 mb-4 list-disc list-inside relative z-10">
+            <li>ปลดล็อกฟีเจอร์จดบันทึกครบ</li>
+            <li>ค้นคว้าคณิตศาสตร์ด้วย AI (525 เครดิต)</li>
+            <li>เข้าถึงได้ทั้ง iOS, Android, Windows, Web</li>
+          </ul>
+          <div class="flex flex-wrap gap-2 text-sm font-medium relative z-10">
+            <span class="bg-cream border border-[#FFC2E2] px-3 py-1 rounded-lg text-brown">เมลรวม 20.-</span>
+            <span class="bg-cream border border-[#FFC2E2] px-3 py-1 rounded-lg text-brown">หาร 5 คน 79.-</span>
+            <span class="bg-pinky text-white px-3 py-1 rounded-lg shadow-sm">ส่วนตัว 229.-</span>
+          </div>
+        </div>
+
+        <div class="bg-pinky-light/20 border-2 border-[#FFC2E2] rounded-2xl p-5 shadow-sm relative overflow-hidden">
+          <div class="absolute top-0 right-4 bg-pinky-dark text-white text-[10px] px-3 py-1 rounded-b-lg font-medium shadow-sm z-10">รายปี (ทุกระบบ)</div>
+          <h3 class="font-medium text-lg text-brown mb-2 mt-1 flex items-center gap-1 relative z-10">Pro <i data-lucide="star" class="w-4 h-4 text-pinky-dark fill-pinky-dark shrink-0"></i></h3>
+          <ul class="text-xs text-brown-light space-y-1.5 mb-4 list-disc list-inside relative z-10">
+            <li>มีครบทุกอย่างใน Essential</li>
+            <li>จดโน้ตอัตโนมัติ & สรุปแบบเรียลไทม์</li>
+            <li>เชื่อมต่อ Google Calendar</li>
+            <li>แชร์ลิงก์ส่วนตัว ทํางานร่วมกันเรียลไทม์</li>
+          </ul>
+          <div class="flex flex-wrap gap-2 text-sm font-medium relative z-10">
+            <span class="bg-white border border-[#FFC2E2] px-3 py-1 rounded-lg text-brown">เมลรวม 20.-</span>
+            <span class="bg-white border border-[#FFC2E2] px-3 py-1 rounded-lg text-brown">หาร 5 คน 149.-</span>
+            <span class="bg-pinky text-white px-3 py-1 rounded-lg shadow-sm">ส่วนตัว 490.-</span>
+          </div>
+        </div>
+      </div>
+      <p class="text-[10px] text-pinky-dark text-center mt-4 bg-white py-1.5 rounded-full shadow-sm">*แนะนำแบบส่วนตัว หากใช้ระบบ Android/Windows/Web ค่ะ</p>
+    </section>
+
   </main>
 
   <!-- Footer / Contact Us -->
-  <footer class="bg-cream pt-10 pb-12 px-6 rounded-t-[40px] text-center mt-2 relative z-10 border-t-2 border-pinky-light shadow-[0_-10px_20px_-5px_rgba(160,89,144,0.2)]">
+  <footer class="bg-cream pt-10 pb-12 px-6 rounded-t-[40px] text-center mt-2 relative z-10 border-t-2 border-[#FFC2E2] shadow-[0_-10px_20px_-5px_rgba(160,89,144,0.2)]">
     <h2 class="text-[15px] font-bold mb-6 mt-2 tracking-wider text-brown flex items-center justify-center gap-2 uppercase">
       CONTACT US <i data-lucide="heart" class="w-4 h-4 text-heart fill-heart"></i>
     </h2>
@@ -479,7 +600,7 @@ body {
         <a href="https://www.facebook.com/share/19jHFiaJMn/?mibextid=wwXIfr" target="_blank" class="flex-1 bg-brown text-white py-3 rounded-full text-[11px] font-medium tracking-wider hover:-translate-y-1 transition-transform shadow-md flex justify-center items-center uppercase">
           FACEBOOK
         </a>
-        <a href="https://lin.ee/XkF46in" target="_blank" class="flex-1 bg-white border-[1.5px] border-brown text-brown py-3 rounded-full text-[11px] font-medium tracking-wider hover:-translate-y-1 transition-transform shadow-md flex justify-center items-center uppercase">
+        <a href="https://lin.ee/XkF46in" target="_blank" class="flex-1 bg-white border-[1.5px] border-[#FFC2E2] text-brown py-3 rounded-full text-[11px] font-medium tracking-wider hover:-translate-y-1 transition-transform shadow-md flex justify-center items-center uppercase">
           LINE
         </a>
       </div>
@@ -493,7 +614,7 @@ body {
 
 <!-- Modal Portfolio -->
 <div id="portfolioModal" class="modal fixed inset-0 z-[100] flex items-center justify-center bg-brown-dark/30 backdrop-blur-sm invisible opacity-0 p-4">
-  <div class="modal-content bg-white w-full max-w-[90vw] sm:max-w-sm rounded-[30px] shadow-2xl overflow-hidden flex flex-col max-h-[85vh] border-4 border-pinky-light relative">
+  <div class="modal-content bg-white w-full max-w-[90vw] sm:max-w-sm rounded-[30px] shadow-2xl overflow-hidden flex flex-col max-h-[85vh] border-4 border-[#FFC2E2] relative">
     <svg class="absolute -top-4 -right-3 w-12 h-12 text-brown opacity-50 rotate-12 drop-shadow-sm z-10" viewBox="0 0 24 24"><use href="#icon-teddy"></use></svg>
     <div id="modalHeaderBg" class="p-5 flex justify-between items-center bg-pinky-light relative">
       <h3 id="modalTitle" class="font-medium text-lg flex items-center gap-2 text-brown">
@@ -515,8 +636,8 @@ body {
 
 <!-- Modal Payment -->
 <div id="paymentModal" class="modal fixed inset-0 z-[100] flex items-center justify-center bg-brown-dark/30 backdrop-blur-sm invisible opacity-0 p-4">
-  <div class="modal-content bg-white w-full max-w-[90vw] sm:max-w-sm rounded-[30px] shadow-2xl overflow-hidden flex flex-col border-4 border-pinky-light relative">
-    <div class="py-2.5 px-4 flex justify-between items-center bg-pinky-light border-b border-pinky/40 relative">
+  <div class="modal-content bg-white w-full max-w-[90vw] sm:max-w-sm rounded-[30px] shadow-2xl overflow-hidden flex flex-col border-4 border-[#FFC2E2] relative">
+    <div class="py-2.5 px-4 flex justify-between items-center bg-pinky-light border-b border-[#FFC2E2] relative">
       <h3 class="font-medium text-sm flex items-center gap-2 text-brown">
         <i data-lucide="qr-code" class="w-4 h-4 text-brown"></i>
         <span>ช่องทางการโอนเงิน</span>
@@ -527,7 +648,7 @@ body {
     </div>
     
     <div class="p-4 text-center bg-cream space-y-3 max-h-[75vh] overflow-y-auto">
-      <div class="bg-white p-2.5 rounded-2xl inline-block shadow-sm border-2 border-dashed border-brown/40">
+      <div class="bg-white p-2.5 rounded-2xl inline-block shadow-sm border-2 border-dashed border-[#FFC2E2]">
         <img src="https://placehold.co/200x200/FFE6F2/A05990?text=QR+CODE" alt="QR Code" class="w-36 h-36 mx-auto object-contain">
       </div>
 
@@ -536,7 +657,7 @@ body {
         <p class="text-[9.5px] text-brown-light font-medium">เช็คชื่อบัญชีก่อนโอน</p>
       </div>
       
-      <div class="bg-white p-2.5 rounded-2xl border border-brown/30 text-left space-y-1 shadow-sm">
+      <div class="bg-white p-2.5 rounded-2xl border border-[#FFC2E2] text-left space-y-1 shadow-sm">
         <div class="flex items-center gap-1.5">
           <i data-lucide="building-2" class="w-3.5 h-3.5 text-brown"></i>
           <p class="text-[11px] font-medium text-brown">ธนาคารกสิกรไทย (K-Bank)</p>
@@ -550,7 +671,7 @@ body {
         <p class="text-[10px] text-brown-light font-medium">ชื่อบัญชี: คนสวย</p>
       </div>
 
-      <div class="bg-white p-2.5 rounded-2xl border border-brown/30 text-left space-y-1 shadow-sm">
+      <div class="bg-white p-2.5 rounded-2xl border border-[#FFC2E2] text-left space-y-1 shadow-sm">
         <div class="flex items-center gap-1.5">
           <i data-lucide="wallet" class="w-3.5 h-3.5 text-brown"></i>
           <p class="text-[11px] font-medium text-brown">TrueMoney Wallet (ทรูมันนี่)</p>
@@ -565,12 +686,12 @@ body {
       </div>
 
       <div class="space-y-1 pt-0.5">
-        <div class="bg-white p-2.5 rounded-2xl border border-brown/30 text-left space-y-1 shadow-sm">
+        <div class="bg-white p-2.5 rounded-2xl border border-[#FFC2E2] text-left space-y-1 shadow-sm">
           <div class="flex items-center gap-1.5">
             <i data-lucide="file-text" class="w-3.5 h-3.5 text-brown"></i>
             <p class="text-[11px] font-medium text-brown">ข้อความกำกับโน้ตสลิป</p>
           </div>
-          <div class="flex items-center justify-between bg-cream px-2.5 py-1 rounded-xl border border-pinky-light">
+          <div class="flex items-center justify-between bg-cream px-2.5 py-1 rounded-xl border border-[#FFC2E2]">
             <span class="font-medium text-brown text-xs">โอนเงินให้คนสวย</span>
             <button onclick="navigator.clipboard.writeText('โอนเงินให้คนสวย'); alert('คัดลอกข้อความโน้ตสลิปแล้ว!');" class="bg-pinky hover:bg-pinky-dark text-white text-[10px] px-2 py-0.5 rounded-md font-medium transition-colors shadow-sm">
               คัดลอก
@@ -626,7 +747,7 @@ function openModal(category) {
     const a = document.createElement('a');
     a.href = link.url;
     a.target = "_blank";
-    a.className = "flex items-center justify-between p-4 bg-white rounded-2xl shadow-sm border-2 border-transparent hover:border-pinky-light hover:shadow-md transition-all group";
+    a.className = "flex items-center justify-between p-4 bg-white rounded-2xl shadow-sm border-2 border-transparent hover:border-[#FFC2E2] hover:shadow-md transition-all group";
     a.innerHTML = `
       <div class="flex items-center gap-3">
         <div class="w-8 h-8 shrink-0 rounded-full flex items-center justify-center ${data.colorClass}">
@@ -667,7 +788,7 @@ function closeModal(modalId) {
   });
 });
 
-/* ระบบ YouTube Music Player Integration */
+/* ระบบ YouTube Music Player Integration พร้อม Autoplay */
 let player;
 let isPlaying = false;
 let noteInterval = null;
@@ -676,15 +797,35 @@ function onYouTubeIframeAPIReady() {
   player = new YT.Player('youtubePlayer', {
     height: '0',
     width: '0',
-    videoId: 'gnujuvJXaIg', // Video ID ของเพลง ayumi hamasaki - Who... "Across the Universe"
+    videoId: 'gnujuvJXaIg',
     playerVars: {
-      'autoplay': 0,
+      'autoplay': 1,
       'controls': 0,
       'loop': 1,
       'playlist': 'gnujuvJXaIg'
+    },
+    events: {
+      'onReady': function(event) {
+        event.target.playVideo();
+        isPlaying = true;
+        const clefIcon = document.getElementById('clefIcon');
+        if(clefIcon) clefIcon.classList.add('animate-clef-playing');
+        if(!noteInterval) noteInterval = setInterval(createFloatingNote, 600);
+      }
     }
   });
 }
+
+// กรณีเบอร์ราว์เซอร์บล็อก Autoplay ให้กดครั้งแรกเพื่อเล่นเพลงได้ทันที
+document.addEventListener('click', function initAudioOnce() {
+  if (!isPlaying && player && player.playVideo) {
+    player.playVideo();
+    isPlaying = true;
+    const clefIcon = document.getElementById('clefIcon');
+    if(clefIcon) clefIcon.classList.add('animate-clef-playing');
+    if(!noteInterval) noteInterval = setInterval(createFloatingNote, 600);
+  }
+}, { once: true });
 
 function createFloatingNote() {
   const container = document.getElementById('notesContainer');
@@ -715,13 +856,14 @@ function toggleMusic() {
     }
     clefIcon.classList.remove('animate-clef-playing');
     clearInterval(noteInterval);
+    noteInterval = null;
   } else {
     if (player && player.playVideo) {
       player.playVideo();
     }
     clefIcon.classList.add('animate-clef-playing');
     createFloatingNote();
-    noteInterval = setInterval(createFloatingNote, 600);
+    if(!noteInterval) noteInterval = setInterval(createFloatingNote, 600);
   }
   isPlaying = !isPlaying;
 }
