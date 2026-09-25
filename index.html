@@ -126,14 +126,14 @@ body {
 </style>
 </head>
 <body class="antialiased selection:bg-pinky selection:text-white relative">
-<!-- ซ่อน YouTube Player สำหรับเล่นเพลง ayumi hamasaki - Who... "Across the Universe" -->
+<!-- ซ่อน YouTube Player สำหรับเล่นเพลง uIAScvNDQpI -->
 <div class="hidden">
   <div id="youtubePlayer"></div>
 </div>
-<!-- ปุ่มเปิดเพลง -->
+<!-- ปุ่มเปิดเพลง (เปลี่ยนสีเป็นชมพูอ่อนพาสเทลๆ) -->
 <div class="fixed bottom-4 left-4 z-50">
   <button id="musicToggle" onclick="toggleMusic()" class="w-12 h-12 bg-white rounded-full p-1 shadow-md border-2 border-[#FFC9E5] flex items-center justify-center hover:scale-110 active:scale-95 transition-all group relative">
-    <div class="w-full h-full rounded-full border-2 border-[#FFE6F2] bg-[#FFC9E5] flex items-center justify-center">
+    <div class="w-full h-full rounded-full border-2 border-[#FFE6F2] bg-[#FFE6F2] flex items-center justify-center">
       <div id="cleficon" class="flex items-center justify-center text-[#A05990] transition-transform">
         <i data-lucide="music" class="w-5 h-5 stroke-[2.5]"></i>
       </div>
@@ -247,7 +247,7 @@ body {
           <span class="font-medium text-xs text-brown group-hover:text-brown-dark text-center leading-tight">ป้ายแนวน่ารัก</span>
         </a>
         <!-- 2. ป้ายแนวสว่าง -->
-        <a href="https://drive.google.com/drive/folders/1Of_4oKv6n32tAccEwbe09lyeKAAldcAk" target="_blank" class="aspect-square bg-white hover:bg-pinky-light border-2 border-pinky-light rounded-2xl p-2 flex flex-col items-center justify-center shadow-sm group transition-all hover:scale-105">
+        <a href="https://drive.google.com/drive/folders/1Of_4oKv6n32tAccEwbe09IyeKAAIdcAk" target="_blank" class="aspect-square bg-white hover:bg-pinky-light border-2 border-pinky-light rounded-2xl p-2 flex flex-col items-center justify-center shadow-sm group transition-all hover:scale-105">
           <div class="w-9 h-9 rounded-xl bg-pinky-light flex items-center justify-center mb-1">
             <i data-lucide="sun" class="w-5 h-5 text-brown"></i>
           </div>
@@ -261,14 +261,14 @@ body {
           <span class="font-medium text-xs text-brown group-hover:text-brown-dark text-center leading-tight">ป้ายแนวมืด</span>
         </a>
         <!-- 4. ป้ายเรทราคา -->
-        <a href="https://drive.google.com/drive/folders/1AWD8J5JtZBSIQsgMHzVazxVKgum0810C" target="_blank" class="aspect-square bg-white hover:bg-pinky-light border-2 border-pinky-light rounded-2xl p-2 flex flex-col items-center justify-center shadow-sm group transition-all hover:scale-105">
+        <a href="https://drive.google.com/drive/folders/1AWD8J5JtZBSlQsgMHzVazxVKgum0810C" target="_blank" class="aspect-square bg-white hover:bg-pinky-light border-2 border-pinky-light rounded-2xl p-2 flex flex-col items-center justify-center shadow-sm group transition-all hover:scale-105">
           <div class="w-9 h-9 rounded-xl bg-cream border border-pinky-light flex items-center justify-center mb-1">
             <i data-lucide="tag" class="w-5 h-5 text-brown"></i>
           </div>
           <span class="font-medium text-xs text-brown group-hover:text-brown-dark text-center leading-tight">ป้ายเรทราคา</span>
         </a>
         <!-- 5. ลายน้ำ -->
-        <a href="https://drive.google.com/drive/folders/1qTde2_bAUL_qgsYfFITgKC8TbHwmgtQe" target="_blank" class="aspect-square bg-white hover:bg-pinky-light border-2 border-pinky-light rounded-2xl p-2 flex flex-col items-center justify-center shadow-sm group transition-all hover:scale-105">
+        <a href="https://drive.google.com/drive/folders/1qTde2_bAUL_qgsYfFlTgKC8TbHwmgtQe" target="_blank" class="aspect-square bg-white hover:bg-pinky-light border-2 border-pinky-light rounded-2xl p-2 flex flex-col items-center justify-center shadow-sm group transition-all hover:scale-105">
           <div class="w-9 h-9 rounded-xl bg-pinky-light flex items-center justify-center mb-1">
             <i data-lucide="droplets" class="w-5 h-5 text-brown"></i>
           </div>
@@ -283,9 +283,9 @@ body {
         </button>
       </div>
     </section>
-    <!-- รูปแบรนเนอร์ -->
+    <!-- รูปแบรนเนอร์ (เปลี่ยนสีกรอบรูปภาพแบรนเนอร์ให้เป็นสีขาว) -->
     <section class="w-full">
-      <div class="rounded-3xl overflow-hidden border-2 border-pinky-light shadow-card bg-white">
+      <div class="rounded-3xl overflow-hidden border-2 border-white shadow-card bg-white">
         <img src="ไม่มีชื่อ 80_20260925012941.png" alt="Banner" class="w-full h-auto object-cover hover:scale-105 transition-transform duration-500" onerror="this.onerror=null; this.src='https://placehold.co/2400x800/FFE6F2/A05990?text=Banner+2400x800';">
       </div>
     </section>
@@ -301,7 +301,7 @@ body {
         </div>
         <span class="text-[10px] bg-pinky-light text-brown px-2 py-0.5 rounded-full font-medium">ว่าง 3 คิว</span>
       </div>
-      <a href="https://docs.google.com/spreadsheets/d/1-FdSIRIWdqaiypReK_ER95wd8PWxHJHZpHq2tXZRt6Q/edit?usp=drivesdk" target="_blank" class="w-full py-3 px-4 rounded-2xl border-2 border-dashed border-brown/70 bg-cream hover:bg-pinky-light/50 transition-colors flex items-center justify-center gap-2 text-brown font-medium text-sm shadow-sm group">
+      <a href="https://docs.google.com/spreadsheets/d/1-FdSIRlWdqaiypReK_ER95wd8PWxHJHZpHq2tXZRt6Q/edit?usp=drivesdk" target="_blank" class="w-full py-3 px-4 rounded-2xl border-2 border-dashed border-brown/70 bg-cream hover:bg-pinky-light/50 transition-colors flex items-center justify-center gap-2 text-brown font-medium text-sm shadow-sm group">
         <i data-lucide="calendar-check" class="w-5 h-5 text-brown group-hover:scale-110 transition-transform"></i>
         <span>เช็คคิวงานตรงนี้</span>
       </a>
@@ -417,21 +417,21 @@ body {
           <div class="w-full aspect-square bg-cream rounded-xl border-2 border-dashed border-pinky-light flex items-center justify-center mb-2 p-2">
             <i data-lucide="dog" class="w-8 h-8 text-brown group-hover:text-brown-dark transition-colors stroke-[1.75]"></i>
           </div>
-          <span class="text-[10px] font-medium text-brown group-hover:text-brown-dark transition-colors leading-tight">Block 2</span>
+          <span class="text-[10px] font-medium text-brown group-hover:text-brown-dark transition-colors leading-tight">˚₊‧꒰ა 𝘽𝙡𝙤𝙘𝙠 ໒꒱ ‧₊˚</span>
         </a>
         <!-- โพลารอยด์ 2 -->
         <a href="https://drive.google.com/drive/folders/1T36yZKLHN5huKfwu1NYW_PVLLsswHTID" target="_blank" class="bg-white hover:bg-pinky-light/30 border border-brown/20 rounded-2xl p-2.5 shadow-polaroid flex flex-col items-center justify-center text-center transition-all hover:scale-105 active:scale-95 group">
           <div class="w-full aspect-square bg-cream rounded-xl border-2 border-dashed border-pinky-light flex items-center justify-center mb-2 p-2">
             <i data-lucide="cat" class="w-8 h-8 text-brown group-hover:text-brown-dark transition-colors stroke-[1.75]"></i>
           </div>
-          <span class="text-[10px] font-medium text-brown group-hover:text-brown-dark transition-colors leading-tight">Toon</span>
+          <span class="text-[10px] font-medium text-brown group-hover:text-brown-dark transition-colors leading-tight">˚₊‧꒰ა 𝙏𝙤𝙤𝙣 ໒꒱ ‧₊˚</span>
         </a>
         <!-- โพลารอยด์ 3 -->
         <a href="https://drive.google.com/drive/folders/1YLsW06GXE_ENus4ad8AUNU4FEM74Z2vl" target="_blank" class="bg-white hover:bg-pinky-light/30 border border-brown/20 rounded-2xl p-2.5 shadow-polaroid flex flex-col items-center justify-center text-center transition-all hover:scale-105 active:scale-95 group">
           <div class="w-full aspect-square bg-cream rounded-xl border-2 border-dashed border-pinky-light flex items-center justify-center mb-2 p-2">
             <i data-lucide="piggy-bank" class="w-8 h-8 text-brown group-hover:text-brown-dark transition-colors stroke-[1.75]"></i>
           </div>
-          <span class="text-[10px] font-medium text-brown group-hover:text-brown-dark transition-colors leading-tight">Desco</span>
+          <span class="text-[10px] font-medium text-brown group-hover:text-brown-dark transition-colors leading-tight">˚₊‧꒰ა 𝘿𝙚𝙨𝙘𝙤 ໒꒱ ‧₊˚</span>
         </a>
       </div>
     </section>
@@ -559,7 +559,7 @@ const portfolioData = {
       { name: "2. BLY HOUSE", url: "https://drive.google.com/drive/folders/1uj7bV9UpOADSHJgnfWrPKhSqPsH1NiqG" },
       { name: "3. IHO FONT", url: "https://drive.google.com/drive/folders/1d3w-fVgEAwjU8eUaTxW52RLQREZ0czVU" },
       { name: "4. PKD HOUSE", url: "https://drive.google.com/drive/folders/15AxmnEWkjsXdgOt30Sr1-Y5IFnDTnDyE" },
-      { name: "5. KLD HOUSE", url: "https://drive.google.com/drive/folders/1LoGGsSx_zVj1ZqpCShlysONojls6mFPo" }
+      { name: "5. KLD HOUSE", url: "https://drive.google.com/drive/folders/1LoGGsSx_zVj1ZqpCShIysONojIs6mFPo" }
     ]
   }
 };
@@ -619,7 +619,7 @@ function closeModal(modalId) {
   });
 });
 
-/* ระบบ YouTube Music Player Integration */
+/* ระบบ YouTube Music Player Integration (เล่นเพลง uIAScvNDQpI อัตโนมัติเมื่อเข้าเว็บ) */
 let player;
 let isPlaying = false;
 let noteInterval = null;
@@ -628,12 +628,22 @@ function onYouTubeIframeAPIReady() {
   player = new YT.Player('youtubePlayer', {
     height: '0',
     width: '0',
-    videoId: 'gnujuvJXalg',
+    videoId: 'uIAScvNDQpI',
     playerVars: {
-      'autoplay': 0,
+      'autoplay': 1,
       'controls': 0,
       'loop': 1,
-      'playlist': 'gnujuvJXalg'
+      'playlist': 'uIAScvNDQpI'
+    },
+    events: {
+      'onReady': function(event) {
+        event.target.playVideo();
+        isPlaying = true;
+        const cleficon = document.getElementById('cleficon');
+        if (cleficon) cleficon.classList.add('animate-clef-playing');
+        createFloatingNote();
+        noteInterval = setInterval(createFloatingNote, 600);
+      }
     }
   });
 }
