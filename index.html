@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Miori Studio</title>
+<title>Miori Shop</title>
 <!-- Google Fonts: Mitr -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -20,28 +20,28 @@ tailwind.config = {
         sans: ['Mitr', 'sans-serif'],
       },
       colors: {
-        cream: '#FFF0F6', // ชมพูพาสเทลสว่างสดใส
+        cream: '#FFF5F9',
         pinky: {
-          light: '#FFE3F1',
-          DEFAULT: '#FF80BF', // ชมพูโบว์สดใส
-          dark: '#E65C9C'
+          light: '#FFE6F2',
+          DEFAULT: '#FF98CE',
+          dark: '#E67BB3'
         },
-        heart: '#FF66B2',
+        heart: '#FFADD6',
         purpley: {
           light: '#FFF0F7',
-          DEFAULT: '#FFB6D9',
-          dark: '#D85C97'
+          DEFAULT: '#FFC2E2',
+          dark: '#D86B9E'
         },
         brown: {
-          light: '#A12C5E',
-          DEFAULT: '#8B2651', // ชมพูเข้มอมม่วง อ่านง่าย คมชัด
-          dark: '#6B1B3E'
+          light: '#C274B3',
+          DEFAULT: '#A05990', // สีตัวอักษรใหม่ตามกำหนด #A05990
+          dark: '#803F72'
         }
       },
       boxShadow: {
-        'soft': '0 4px 20px 2px rgba(255, 128, 191, 0.35)',
-        'card': '0 10px 25px -5px rgba(255, 128, 191, 0.3)',
-        'polaroid': '0 4px 12px rgba(255, 128, 191, 0.25)',
+        'soft': '0 4px 20px 2px rgba(160, 89, 144, 0.25)',
+        'card': '0 10px 25px -5px rgba(160, 89, 144, 0.2)',
+        'polaroid': '0 4px 10px rgba(160, 89, 144, 0.15)',
       }
     }
   }
@@ -49,21 +49,21 @@ tailwind.config = {
 </script>
 <style>
 body {
-  background-color: #FFF0F6;
-  color: #8B2651;
+  background-color: #FFF5F9;
+  color: #A05990;
 }
 ::-webkit-scrollbar {
   width: 8px;
 }
 ::-webkit-scrollbar-track {
-  background: #FFF0F6;
+  background: #FFF5F9;
 }
 ::-webkit-scrollbar-thumb {
-  background: #FF80BF;
+  background: #A05990;
   border-radius: 10px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #E65C9C;
+  background: #803F72;
 }
 .modal {
   transition: opacity 0.3s ease, visibility 0.3s ease;
@@ -81,7 +81,7 @@ body {
 }
 @keyframes float-reverse {
   0%, 100% { transform: translateY(0px) rotate(0deg); }
-  50% { transform: translateY(15px) rotate(-8deg); }
+  50% { transform: translateY(-15px) rotate(-8deg); }
 }
 @keyframes float-slow {
   0%, 100% { transform: translateY(0px) scale(1); }
@@ -117,7 +117,7 @@ body {
 .music-note {
   position: absolute;
   pointer-events: none;
-  color: #FF80BF;
+  color: #A05990;
   font-size: 14px;
   font-weight: bold;
   animation: note-float 2s ease-out infinite;
@@ -129,11 +129,11 @@ body {
 <!-- Audio Element สำหรับเพลงภูมิหลัง -->
 <audio id="bgMusic" loop src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3"></audio>
 
-<!-- ปุ่มเปิดเพลง -->
+<!-- ปุ่มเปิดเพลง (ปรับสีปุ่มเปิดปิดเพลงให้เข้ากับโทนสีใหม่) -->
 <div class="fixed bottom-4 left-4 z-50">
-  <button id="musicToggle" onclick="toggleMusic()" class="w-12 h-12 bg-white rounded-full p-1 shadow-md border-2 border-[#FF80BF] flex items-center justify-center hover:scale-110 active:scale-95 transition-all group relative">
-    <div class="w-full h-full rounded-full border-2 border-[#FFE3F1] bg-[#FFF0F7] flex items-center justify-center">
-      <div id="clefIcon" class="flex items-center justify-center text-[#FF80BF] transition-transform">
+  <button id="musicToggle" onclick="toggleMusic()" class="w-12 h-12 bg-white rounded-full p-1 shadow-md border-2 border-[#A05990] flex items-center justify-center hover:scale-110 active:scale-95 transition-all group relative">
+    <div class="w-full h-full rounded-full border-2 border-[#FFE6F2] bg-[#FFF0F7] flex items-center justify-center">
+      <div id="clefIcon" class="flex items-center justify-center text-[#A05990] transition-transform">
         <i data-lucide="music" class="w-5 h-5 stroke-[2.5]"></i>
       </div>
     </div>
@@ -145,29 +145,29 @@ body {
 <svg width="0" height="0" class="hidden absolute pointer-events-none">
   <symbol id="icon-teddy" viewBox="0 0 24 24" fill="currentColor">
     <circle cx="6" cy="7" r="3.5"/>
-    <circle cx="6" cy="7" r="1.5" fill="#FFF0F6" />
+    <circle cx="6" cy="7" r="1.5" fill="#FFF5F9" />
     <circle cx="18" cy="7" r="3.5"/>
-    <circle cx="18" cy="7" r="1.5" fill="#FFF0F6" />
+    <circle cx="18" cy="7" r="1.5" fill="#FFF5F9" />
     <path d="M12 6C6 4 10 4 15C4 20 7 22.5 12 22.5C17 22.5 20 20 20 15C20 10 17 6 12 6Z" />
-    <circle cx="8.5" cy="12" r="1.2" fill="#FFF0F6" />
-    <circle cx="15.5" cy="12" r="1.2" fill="#FFF0F6" />
-    <ellipse cx="12" cy="16.5" rx="4" ry="3" fill="#FFF0F6" />
-    <ellipse cx="12" cy="15" rx="1.5" ry="1" fill="#8B2651" />
-    <path d="M12 16v1.5M10.5 18c.5.5 2.5.5 3 0" stroke="#8B2651" stroke-width="1.2" fill="none" stroke-linecap="round" />
+    <circle cx="8.5" cy="12" r="1.2" fill="#FFF5F9" />
+    <circle cx="15.5" cy="12" r="1.2" fill="#FFF5F9" />
+    <ellipse cx="12" cy="16.5" rx="4" ry="3" fill="#FFF5F9" />
+    <ellipse cx="12" cy="15" rx="1.5" ry="1" fill="#A05990" />
+    <path d="M12 16v1.5M10.5 18c.5.5 2.5.5 3 0" stroke="#A05990" stroke-width="1.2" fill="none" stroke-linecap="round" />
   </symbol>
   <symbol id="icon-button" viewBox="0 0 100 100">
     <circle cx="50" cy="50" r="46" fill="#FFF0F7" />
-    <circle cx="50" cy="50" r="42" fill="#FFE3F1" />
-    <circle cx="50" cy="50" r="28" fill="#FFF0F6" />
-    <circle cx="50" cy="50" r="28" fill="none" stroke="#FFB6D9" stroke-width="2" />
+    <circle cx="50" cy="50" r="42" fill="#FFE6F2" />
+    <circle cx="50" cy="50" r="28" fill="#FFF5F9" />
+    <circle cx="50" cy="50" r="28" fill="none" stroke="#FFC2E2" stroke-width="2" />
     <circle cx="40" cy="40" r="5.5" fill="#FFFFFF" />
     <circle cx="60" cy="40" r="5.5" fill="#FFFFFF" />
     <circle cx="40" cy="60" r="5.5" fill="#FFFFFF" />
     <circle cx="60" cy="60" r="5.5" fill="#FFFFFF" />
-    <path d="M38 39 L62 63 M62 39 L38 63" stroke="#FF80BF" stroke-width="8" stroke-linecap="round"/>
+    <path d="M38 39 L62 63 M62 39 L38 63" stroke="#A05990" stroke-width="8" stroke-linecap="round"/>
     <path d="M38 38 L62 62 M62 38 L38 62" stroke="#FFFFFF" stroke-width="8" stroke-linecap="round"/>
   </symbol>
-  <symbol id="icon-heart-cute" viewBox="0 0 24 24" fill="#FF66B2">
+  <symbol id="icon-heart-cute" viewBox="0 0 24 24" fill="#FFADD6">
     <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
   </symbol>
 </svg>
@@ -196,7 +196,7 @@ body {
     <div class="shrink-0 relative group cursor-pointer hover:scale-105 transition-transform duration-300">
       <svg class="absolute -top-3 -left-3 w-10 h-10 opacity-70 -rotate-12 z-0" viewBox="0 0 100 100"><use href="#icon-button"></use></svg>
       <div class="w-24 h-24 rounded-2xl border-[4px] border-white shadow-md overflow-hidden bg-white flex items-center justify-center relative z-10">
-        <img src="ไม่มีชื่อ 81_20260925210212.png" alt="Miori Shop Logo" class="w-full h-full object-cover" onerror="this.onerror=null; this.src='https://placehold.co/150x150/FFE3F1/8B2651?text=Miori';">
+        <img src="ไม่มีชื่อ 81_20260925210212.png" alt="Miori Shop Logo" class="w-full h-full object-cover" onerror="this.onerror=null; this.src='https://placehold.co/150x150/FFE6F2/A05990?text=Miori';">
       </div>
       <div class="absolute -bottom-2 -right-2 w-8 h-8 bg-white rounded-full flex items-center justify-center shadow-sm border-2 border-pinky-light group-hover:rotate-12 transition-transform z-20">
         <i data-lucide="heart" class="w-4 h-4 text-heart fill-heart"></i>
@@ -205,7 +205,7 @@ body {
     <div class="flex-1 text-left relative z-10">
       <div class="flex items-center gap-2 mb-1 opacity-80">
         <i data-lucide="star" class="w-4 h-4 text-brown fill-brown" stroke-width="1.5"></i>
-        <i data-lucide="sparkles" class="w-4 h-4 text-pinky-dark" stroke-width="1.5"></i>
+        <i data-lucide="sparkles" class="w-4 h-4 text-brown" stroke-width="1.5"></i>
       </div>
       <h1 class="text-[34px] leading-tight font-bold text-brown mb-2 relative">Miori Shop</h1>
       <p class="text-brown-light text-[11px] leading-relaxed font-medium tracking-wide bg-white inline-block px-3 py-1.5 rounded-2xl shadow-sm border border-pinky-light">
@@ -299,7 +299,7 @@ body {
     <!-- รูปแบรนเนอร์ -->
     <section class="w-full">
       <div class="rounded-3xl overflow-hidden border-2 border-pinky-light shadow-card bg-white">
-        <img src="ไม่มีชื่อ 80_20260925012941.png" alt="Banner" class="w-full h-auto object-cover hover:scale-105 transition-transform duration-500" onerror="this.onerror=null; this.src='https://placehold.co/2400x800/FFE3F1/8B2651?text=Banner+2400x800';">
+        <img src="ไม่มีชื่อ 80_20260925012941.png" alt="Banner" class="w-full h-auto object-cover hover:scale-105 transition-transform duration-500" onerror="this.onerror=null; this.src='https://placehold.co/2400x800/FFE6F2/A05990?text=Banner+2400x800';">
       </div>
     </section>
 
@@ -459,8 +459,8 @@ body {
       </button>
     </section>
 
-    <!-- Work parts (ขยายขนาดไอคอนเต็มกรอบสี่เหลี่ยมมน w-16 h-16 ตรงตามรูปตัวอย่าง) -->
-    <section class="bg-white rounded-3xl p-5 border-2 border-dashed border-brown/40 shadow-sm text-center">
+    <!-- Work parts (บล็อกนอกสุดเป็นเส้นปกติทึบ / กรอบในน้องหมา แมว หมู เป็นเส้นประ / ความหนาเส้นไอคอนขนาดปกติ) -->
+    <section class="bg-white rounded-3xl p-5 border-2 border-solid border-pinky/60 shadow-sm text-center">
       <h3 class="font-medium text-brown text-sm flex items-center justify-center gap-1.5">
         <i data-lucide="sparkles" class="w-4 h-4 text-brown"></i> Work parts
       </h3>
@@ -469,24 +469,24 @@ body {
       <div class="grid grid-cols-3 gap-3">
         <!-- โพลารอยด์ 1: ˚₊‧꒰ა 𝘽𝙡𝙤𝙘𝙠 ໒꒱ ‧₊˚ -->
         <a href="https://drive.google.com/drive/folders/10wVjpHKCr8rMZ-UoCd5G_ALc13AUC1Qk" target="_blank" class="bg-white hover:bg-pinky-light/30 border border-brown/20 rounded-2xl p-2 shadow-polaroid flex flex-col items-center justify-center text-center transition-all hover:scale-105 active:scale-95 group">
-          <div class="w-full aspect-square bg-cream rounded-xl border border-pinky-light/60 flex items-center justify-center mb-2 p-1">
-            <i data-lucide="dog" class="w-16 h-16 text-brown group-hover:text-brown-dark transition-colors stroke-[2.2]"></i>
+          <div class="w-full aspect-square bg-cream rounded-xl border-2 border-dashed border-pinky-light flex items-center justify-center mb-2 p-1">
+            <i data-lucide="dog" class="w-16 h-16 text-brown group-hover:text-brown-dark transition-colors stroke-[1.5]"></i>
           </div>
           <span class="text-[10px] font-medium text-brown group-hover:text-brown-dark transition-colors leading-tight">˚₊‧꒰ა 𝘽𝙡𝙤𝙘𝙠 ໒꒱ ‧₊˚</span>
         </a>
 
         <!-- โพลารอยด์ 2: ˚₊‧꒰ა 𝙏𝙤𝙤𝙣 ໒꒱ ‧₊˚ -->
         <a href="https://drive.google.com/drive/folders/1T36yZKLHN5huKfwu1NYW_PVLLsswHTiD" target="_blank" class="bg-white hover:bg-pinky-light/30 border border-brown/20 rounded-2xl p-2 shadow-polaroid flex flex-col items-center justify-center text-center transition-all hover:scale-105 active:scale-95 group">
-          <div class="w-full aspect-square bg-cream rounded-xl border border-pinky-light/60 flex items-center justify-center mb-2 p-1">
-            <i data-lucide="cat" class="w-16 h-16 text-brown group-hover:text-brown-dark transition-colors stroke-[2.2]"></i>
+          <div class="w-full aspect-square bg-cream rounded-xl border-2 border-dashed border-pinky-light flex items-center justify-center mb-2 p-1">
+            <i data-lucide="cat" class="w-16 h-16 text-brown group-hover:text-brown-dark transition-colors stroke-[1.5]"></i>
           </div>
           <span class="text-[10px] font-medium text-brown group-hover:text-brown-dark transition-colors leading-tight">˚₊‧꒰ა 𝙏𝙤𝙤𝙣 ໒꒱ ‧₊˚</span>
         </a>
 
         <!-- โพลารอยด์ 3: ˚₊‧꒰ა 𝘿𝙚𝙨𝙘𝙤 ໒꒱ ‧₊˚ -->
         <a href="https://drive.google.com/drive/folders/1YLsW06GXE_ENus4ad8AUNU4FEM74Z2vl" target="_blank" class="bg-white hover:bg-pinky-light/30 border border-brown/20 rounded-2xl p-2 shadow-polaroid flex flex-col items-center justify-center text-center transition-all hover:scale-105 active:scale-95 group">
-          <div class="w-full aspect-square bg-cream rounded-xl border border-pinky-light/60 flex items-center justify-center mb-2 p-1">
-            <i data-lucide="piggy-bank" class="w-16 h-16 text-brown group-hover:text-brown-dark transition-colors stroke-[2.2]"></i>
+          <div class="w-full aspect-square bg-cream rounded-xl border-2 border-dashed border-pinky-light flex items-center justify-center mb-2 p-1">
+            <i data-lucide="piggy-bank" class="w-16 h-16 text-brown group-hover:text-brown-dark transition-colors stroke-[1.5]"></i>
           </div>
           <span class="text-[10px] font-medium text-brown group-hover:text-brown-dark transition-colors leading-tight">˚₊‧꒰ა 𝘿𝙚𝙨𝙘𝙤 ໒꒱ ‧₊˚</span>
         </a>
@@ -576,7 +576,7 @@ body {
   </main>
 
   <!-- Footer / Contact Us -->
-  <footer class="bg-cream pt-10 pb-12 px-6 rounded-t-[40px] text-center mt-2 relative z-10 border-t-2 border-pinky-light shadow-[0_-10px_20px_-5px_rgba(255,128,191,0.3)]">
+  <footer class="bg-cream pt-10 pb-12 px-6 rounded-t-[40px] text-center mt-2 relative z-10 border-t-2 border-pinky-light shadow-[0_-10px_20px_-5px_rgba(160,89,144,0.2)]">
     <h2 class="text-[15px] font-bold mb-6 mt-2 tracking-wider text-brown flex items-center justify-center gap-2 uppercase">
       CONTACT US <i data-lucide="heart" class="w-4 h-4 text-heart fill-heart"></i>
     </h2>
@@ -637,7 +637,7 @@ body {
     
     <div class="p-4 text-center bg-cream space-y-3 max-h-[75vh] overflow-y-auto">
       <div class="bg-white p-2.5 rounded-2xl inline-block shadow-sm border-2 border-dashed border-brown/40">
-        <img src="https://placehold.co/200x200/FFE3F1/8B2651?text=QR+CODE" alt="QR Code" class="w-36 h-36 mx-auto object-contain">
+        <img src="https://placehold.co/200x200/FFE6F2/A05990?text=QR+CODE" alt="QR Code" class="w-36 h-36 mx-auto object-contain">
       </div>
 
       <div class="-mt-1 text-center space-y-0.5">
